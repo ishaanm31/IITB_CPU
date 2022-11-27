@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity FSM is
 	port(clock, reset, Z_flag, C_flag :in std_logic;
         T2_out :in std_logic_vector(15 downto 0);
-        loop_count:in std_logic_vector(15 downto 0);
+        loop_count:in std_logic_vector(2 downto 0);
         alu_sel:out std_logic_vector(1 downto 0);    
         A1_sel : out std_logic_vector(1 downto 0);
         A3_sel : out std_logic_vector(2 downto 0);
@@ -295,7 +295,7 @@ case State is --  making cases for states
     when S9 =>
         v_Mem_Add_Sel:='1';
         v_Mem_In_Sel:='1';
-        v_A1_sel:="00";
+        v_A1_se6l:="00";
         v_mem_WR_Internal := v_LMSM_Imm(to_integer(unsigned(loop_count)));
         v_ALU_A_sel:="100";
         v_ALU_B_sel:="10";
