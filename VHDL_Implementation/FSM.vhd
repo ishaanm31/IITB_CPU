@@ -269,6 +269,11 @@ when S6 =>
         v_T3_sel:='1';
         v_alu_sel:="00";
         next_state:=S6;
+		  if(OP_code="0110") then
+				 next_state:=S6;
+			else
+				 next_state:=S9;
+			end if;
 ---------
     when S8 =>
         v_Reg_file_EN := '1';   
