@@ -18,7 +18,7 @@ entity Datapath is
         ALU_A_sel: in std_logic_vector(2 downto 0);
         ALU_B_sel: in std_logic_vector(1 downto 0);
         T3_sel, Mem_Add_Sel, Mem_In_Sel: in std_logic;
-        
+        loop_sel:in std_logic;
         --Outputs to FSM
         Z_flag, C_flag: out std_logic;
         T1_out,T2_out ,T3_out: buffer std_logic_vector(15 downto 0);
@@ -164,7 +164,7 @@ architecture Struct of Datapath is
     --Signals for temporary Registers.
     signal T3_in: std_logic_vector(15 downto 0);
     signal T4_out: std_logic_vector(15 downto 0);
-    signal loop_count_IN: std_logic_vector(15 downto 0);
+    signal loop_in: std_logic_vector(15 downto 0);
     
     --Sig_Extended Signals
     signal T2_SE7_out: std_logic_vector(15 downto 0);
@@ -181,8 +181,10 @@ begin
     T2: Register_16bit port map(DataIn => mem_out, clock => clock, Write_Enable => T2_WR, DataOut => T2_out);
     T3: Register_16bit port map(DataIn => T3_in, clock => clock, Write_Enable => T3_WR, DataOut => T3_out);
     T4: Register_16bit port map(DataIn => D2, clock => clock, Write_Enable => T4_WR, DataOut => T4_out);
-    loop_register : Register_16bit port map (DataIn => ALU_C, clock => clock, Write_Enable => loop_count_WR, DataOut => loop_count);
---Mux for T3 from 00->D1, 01-> ALU_C    
+    loop_register : Register_16bit port map (DataIn => loop_in, clock => clock, Write_Enable => loop_count_WR, DataOut => loop_count);
+    --Mux for Loop register
+    Loop_Mux: Mux16_2x1 port map(ALU_C,"000",loop_sel,loop_in)
+    --Mux for T3 from 00->D1, 01-> ALU_C    
     T3_Mux: MUX16_2x1 port map(A0=> D1,A1=> alu_c, sel =>T3_sel, F=>T3_in);
 
 --Register File Instantiate
@@ -215,7 +217,7 @@ begin
     ALU_A_Mux : Mux16_8x1 port map(A0 => T1_out, A1 => T3_out, A2 => T4_out,A3 => T2_SE10_out,
                             A4=>loop_count,A5=>"0000000000000000",A6=>"0000000000000000",
                             A7=>"0000000000000000", sel => ALU_A_sel, F => alu_a);
-    ALU_B_Mux : Mux16_4x1 port map(A0 => T2_SE_out, A1 => T2_SE7_out, A2 => "0000000000000001", A3 => T4_out, sel => ALU_B_sel, F => alu_b); 
+    ALU_B_Mux : Mux16_4x1 port map(A0 => T2_SE10_out, A1 => T2_SE7_out, A2 => "0000000000000001", A3 => T4_out, sel => ALU_B_sel, F => alu_b); 
     
     carry_dff: dff_en port map(clk => clock, reset => reset, en => C_ctrl, d => carry_dff_inp, q => C_flag);
     zero_dff: dff_en port map(clk => clock, reset => reset, en => Z_ctrl, d => zero_dff_inp, q => Z_flag);

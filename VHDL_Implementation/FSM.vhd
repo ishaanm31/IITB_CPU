@@ -15,7 +15,8 @@ entity FSM is
         T1_WR,T2_WR,T3_WR,T4_WR,loop_count_WR: out std_logic;
         ALU_A_sel: out std_logic_vector(2 downto 0);
         ALU_B_sel: out std_logic_vector(1 downto 0);
-        T3_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic
+        T3_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic;
+        loop_sel:out std_logic
 		);
 end FSM;
 
@@ -29,7 +30,7 @@ begin
 process(clock)
     variable next_state: FSM_States;
     variable v_alu_sel: std_logic_vector(1 downto 0);    
-    variable v_loop_count_WR: std_logic;
+    variable v_loop_count_WR,v_loop_sel: std_logic;
     variable v_A1_sel : std_logic_vector(1 downto 0);
     variable v_A3_sel : std_logic_vector(2 downto 0);
     variable v_D3_sel : std_logic_vector(2 downto 0);
@@ -58,6 +59,7 @@ process(clock)
         v_Mem_In_Sel:='0';
         OP_code:= T2_out(15 downto 12);
         v_LMSM_Imm:=T2_out(7 downto 0);
+        v_loop_sel:='0';
         Flag:= (((not (T2_out(1))) and (not(T2_out(0)))) or (T2_out(1)and C_flag) or (T2_out(0)and Z_flag));
 
 case State is --  making cases for states 
@@ -104,7 +106,7 @@ case State is --  making cases for states
             next_state := S6;
 
         elsif(OP_code="0111") then
-            next_state := S7;
+            next_state := S9;
 
         elsif(OP_code="1100") then
             next_state := S2;
@@ -129,15 +131,15 @@ case State is --  making cases for states
         v_T3_sel:='1';
         v_T3_WR:='1';
         if(OP_code="0000") then
-            v_ALU_A_sel:="010";
-            v_ALU_B_sel:="00";
+            v_ALU_A_sel:="001";
+            v_ALU_B_sel:="11";
             v_alu_sel:="00";
             v_Z_ctrl:='1';
             v_C_ctrl:='1';
             next_state := S8;
 
         elsif (OP_code="0001") then
-            v_ALU_A_sel:="011";
+            v_ALU_A_sel:="001";
             v_ALU_B_sel:="00";
             v_alu_sel:="00";
             v_Z_ctrl:='1';
@@ -145,8 +147,8 @@ case State is --  making cases for states
             next_state:= S8;
 
         elsif(OP_code="0010") then
-            v_ALU_A_sel:="010";
-            v_ALU_B_sel:="00";
+            v_ALU_A_sel:="001";
+            v_ALU_B_sel:="11";
             v_alu_sel:="01";
             v_Z_ctrl:='1';
             next_state := S8 ; 
@@ -177,8 +179,9 @@ case State is --  making cases for states
 -----------------------------------		
     when S3 =>
         v_ALU_A_sel:="000";
+        v_alu_sel:="00";
         v_D3_sel:="101";
-        v_A3_sel:="011";
+        v_A3_sel:="111";
         v_Reg_file_EN:='1';   
         if(OP_code="0000") then
             v_ALU_B_sel:= "10";
@@ -214,9 +217,9 @@ case State is --  making cases for states
 
         elsif(OP_code="1100") then
             if(Z_flag='1') then
-                v_ALU_B_sel:= "11";
+                v_ALU_B_sel:= "00";
             else 
-					v_ALU_B_sel:= "10";
+				v_ALU_B_sel:= "10";
 				end if;
 			next_state:= S0;
         elsif(OP_code="1000") then
@@ -242,6 +245,31 @@ case State is --  making cases for states
         next_state:=S3;
 
 -------------------------------------
+
+when S6 =>
+        v_Mem_Add_Sel:='1';
+        v_D3_sel:="010";
+        v_A3_sel:="011";
+        v_Reg_file_EN := v_LMSM_Imm(to_integer(unsigned(loop_count)));
+        v_ALU_A_sel:="100";
+        v_ALU_B_sel:="10";
+        v_alu_sel:="00";
+        v_loop_count_WR:='1';
+        if(to_integer(unsigned(loop_count))<7) then
+            next_state:=S7;
+        else 
+            loop_sel:='1';
+            next_state:=S3; 
+        end if;
+---------------
+    when S7 =>
+        v_ALU_A_sel:="001";
+        v_ALU_B_sel:="10";
+        v_T3_WR:='1';
+        v_T3_sel:='1';
+        v_alu_sel:="00";
+        next_state:=S6;
+---------
     when S8 =>
         v_Reg_file_EN := '1';   
             if(OP_code="0000") then
@@ -269,28 +297,7 @@ case State is --  making cases for states
                 next_state:=S0;
             end if;
 
-    when S6 =>
-        v_Mem_Add_Sel:='1';
-        v_D3_sel:="010";
-        v_A3_sel:="011";
-        v_Reg_file_EN := v_LMSM_Imm(to_integer(unsigned(loop_count)));
-        v_ALU_A_sel:="100";
-        v_ALU_B_sel:="10";
-        v_alu_sel:="00";
-        v_loop_count_WR:='1';
-        if(to_integer(unsigned(loop_count))<7) then
-            next_state:=S7;
-        else 
-            next_state:=S3; 
-        end if;
-
-    when S7 =>
-        v_ALU_A_sel:="001";
-        v_ALU_B_sel:="10";
-        v_T3_WR:='1';
-        v_T3_sel:='1';
-        v_alu_sel:="00";
-        next_state:=S6;
+    
 
     when S9 =>
         v_Mem_Add_Sel:='1';
@@ -304,6 +311,7 @@ case State is --  making cases for states
         if(to_integer(unsigned(loop_count))<7) then
             next_state:=S7;
         else 
+            loop_sel:='1';
             next_state:=S3; 
         end if;
     
