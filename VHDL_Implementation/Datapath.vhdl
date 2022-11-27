@@ -183,7 +183,7 @@ begin
     T4: Register_16bit port map(DataIn => D2, clock => clock, Write_Enable => T4_WR, DataOut => T4_out);
     loop_register : Register_16bit port map (DataIn => loop_in, clock => clock, Write_Enable => loop_count_WR, DataOut => loop_count);
     --Mux for Loop register
-    Loop_Mux: Mux16_2x1 port map(ALU_C,"000",loop_sel,loop_in)
+    Loop_Mux: Mux16_2x1 port map(ALU_C,"0000000000000000",loop_sel,loop_in);
     --Mux for T3 from 00->D1, 01-> ALU_C    
     T3_Mux: MUX16_2x1 port map(A0=> D1,A1=> alu_c, sel =>T3_sel, F=>T3_in);
 

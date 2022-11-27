@@ -258,7 +258,7 @@ when S6 =>
         if(to_integer(unsigned(loop_count))<7) then
             next_state:=S7;
         else 
-            loop_sel:='1';
+            v_loop_sel:='1';
             next_state:=S3; 
         end if;
 ---------------
@@ -311,7 +311,7 @@ when S6 =>
         if(to_integer(unsigned(loop_count))<7) then
             next_state:=S7;
         else 
-            loop_sel:='1';
+            v_loop_sel:='1';
             next_state:=S3; 
         end if;
     
@@ -331,7 +331,7 @@ end case;
     --mapping to actual signal
     alu_sel<=v_alu_sel;
     loop_count_WR<=v_loop_count_WR;
-    v_A1_sel:=v_A1_sel; A3_sel<=v_A3_sel; D3_sel<=v_D3_sel;
+    A1_sel<=v_A1_sel; A3_sel<=v_A3_sel; D3_sel<=v_D3_sel;
     T3_sel<=v_T3_sel;
     Reg_file_EN<=v_Reg_file_EN;
     mem_WR_Internal<=v_mem_WR_Internal;
@@ -342,6 +342,7 @@ end case;
     T3_sel<=v_T3_sel;
     Mem_Add_Sel<=v_Mem_Add_Sel;
     Mem_In_Sel<=v_Mem_In_Sel;
+	 loop_sel<= v_loop_sel;
 
     end process;
 end behave;
