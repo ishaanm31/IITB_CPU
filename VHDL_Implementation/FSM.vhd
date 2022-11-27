@@ -22,7 +22,7 @@ end FSM;
 
 architecture behave of FSM is
     -------ADD-SUM-------------------------------------------------------------
-    type FSM_States   is (S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10);
+    type FSM_States   is (S0,S1,S2,S3,S4,S5,S6,S7,S8,S9);
     signal State : FSM_States;
 begin
     
@@ -65,7 +65,7 @@ case State is --  making cases for states
             --------------------------		    
     when S0 =>
         v_A1_sel:="01";
-        v_T1_WR:='1';
+        v_T1_WR:='1' ;
         v_Mem_Add_Sel:='0';
         v_T2_WR:='1';
 

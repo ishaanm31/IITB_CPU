@@ -215,7 +215,7 @@ begin
     ALU_A_Mux : Mux16_8x1 port map(A0 => T1_out, A1 => T3_out, A2 => T4_out,A3 => T2_SE10_out,
                             A4=>loop_count,A5=>"0000000000000000",A6=>"0000000000000000",
                             A7=>"0000000000000000", sel => ALU_A_sel, F => alu_a);
-    ALU_B_Mux : Mux16_4x1 port map(A0 => T3_out, A1 => T2_SE7_out, A2 => "0000000000000001", A3 => "0000000000000000", sel => ALU_B_sel, F => alu_b); 
+    ALU_B_Mux : Mux16_4x1 port map(A0 => T2_SE_out, A1 => T2_SE7_out, A2 => "0000000000000001", A3 => T4_out, sel => ALU_B_sel, F => alu_b); 
     
     carry_dff: dff_en port map(clk => clock, reset => reset, en => C_ctrl, d => carry_dff_inp, q => C_flag);
     zero_dff: dff_en port map(clk => clock, reset => reset, en => Z_ctrl, d => zero_dff_inp, q => Z_flag);
