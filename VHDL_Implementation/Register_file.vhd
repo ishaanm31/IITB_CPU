@@ -21,9 +21,10 @@ begin
 write_process : process(A3,D3,Write_Enable,Data,clock) 
 
   begin
+  if (clock'event and (clock='1')) then
     if(Write_Enable='1') then  
       Data(To_integer(unsigned(A3)))<= D3;
-    
+	 end if;
   end if;
 end process;
 ------------------------------------- Read A1 D1---------------------------
