@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_CPU
-Mon Nov 28 23:28:26 2022
+Mon Nov 28 23:52:26 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,16 +10,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. State Machine - |IITB_CPU|FSM:My_FSM|State
+  5. State Machine - |DUT|IITB_CPU:add_instance|FSM:My_FSM|State
   6. Registers Packed Into Inferred Megafunctions
   7. Multiplexer Restructuring Statistics (Restructuring Performed)
-  8. Source assignments for FSM:My_FSM
-  9. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux"
- 10. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux"
- 11. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:D3_Mux"
- 12. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_8x1:A3_Mux"
- 13. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_4x1:A1_Mux"
- 14. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_2x1:Loop_Mux"
+  8. Source assignments for IITB_CPU:add_instance|FSM:My_FSM
+  9. Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux"
+ 10. Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux"
+ 11. Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:D3_Mux"
+ 12. Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_8x1:A3_Mux"
+ 13. Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_4x1:A1_Mux"
+ 14. Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Loop_Mux"
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
 
@@ -48,10 +48,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Nov 28 23:28:26 2022           ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 28 23:52:26 2022           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
-; Top-level Entity Name              ; IITB_CPU                                    ;
+; Top-level Entity Name              ; DUT                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -73,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M25SAE144C8G     ;                    ;
-; Top-level entity name                                            ; IITB_CPU           ; IITB_CPU           ;
+; Top-level entity name                                            ; DUT                ; IITB_CPU           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -171,7 +171,7 @@ https://fpgasoftware.intel.com/eula.
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |IITB_CPU|FSM:My_FSM|State                                                                             ;
+; State Machine - |DUT|IITB_CPU:add_instance|FSM:My_FSM|State                                                            ;
 +----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
 ; Name     ; State.S9 ; State.S8 ; State.S7 ; State.S6 ; State.S5 ; State.S4 ; State.S3 ; State.S2 ; State.S1 ; State.S0 ;
 +----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
@@ -188,108 +188,108 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                            ;
-+-----------------------------------------------------+--------------------------------------------+------+
-; Register Name                                       ; Megafunction                               ; Type ;
-+-----------------------------------------------------+--------------------------------------------+------+
-; Datapath:My_Datapath|Memory:mem|Mem_Data_Out[0..15] ; Datapath:My_Datapath|Memory:mem|Data_rtl_0 ; RAM  ;
-+-----------------------------------------------------+--------------------------------------------+------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                                                        ;
++---------------------------------------------------------------------------+------------------------------------------------------------------+------+
+; Register Name                                                             ; Megafunction                                                     ; Type ;
++---------------------------------------------------------------------------+------------------------------------------------------------------+------+
+; IITB_CPU:add_instance|Datapath:My_Datapath|Memory:mem|Mem_Data_Out[0..15] ; IITB_CPU:add_instance|Datapath:My_Datapath|Memory:mem|Data_rtl_0 ; RAM  ;
++---------------------------------------------------------------------------+------------------------------------------------------------------+------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |IITB_CPU|Datapath:My_Datapath|Register_16bit:T4|Data[15]   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux3_4x1:A1_Mux|Mux0         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|FSM:My_FSM|v_A3_sel                               ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|ALU:alu1|ALU_c[5]            ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux|Mux7     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux|Mux11    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_In_Mux|F[0]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_Add_Mux|F[15]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |IITB_CPU|FSM:My_FSM|v_alu_sel                              ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Register_file:Reg_File|Mux13 ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 30 LEs               ; 20 LEs                 ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux0     ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux11    ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux3        ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux11       ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux7        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux3_8x1:A3_Mux|Mux1         ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux13    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_16bit:T4|Data[15]   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_4x1:A1_Mux|Mux0         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|FSM:My_FSM|v_A3_sel                               ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|ALU:alu1|ALU_c[5]            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux|Mux7     ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux|Mux11    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Mem_In_Mux|F[0]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Mem_Add_Mux|F[15]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|FSM:My_FSM|v_alu_sel                              ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_file:Reg_File|Mux13 ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 30 LEs               ; 20 LEs                 ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux0     ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux11    ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux3        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux11       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux7        ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_8x1:A3_Mux|Mux1         ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux13    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------+
-; Source assignments for FSM:My_FSM                 ;
-+--------------------------+---------+------+-------+
-; Assignment               ; Value   ; From ; To    ;
-+--------------------------+---------+------+-------+
-; STATE_MACHINE_PROCESSING ; ONE_HOT ; -    ; State ;
-+--------------------------+---------+------+-------+
++---------------------------------------------------------+
+; Source assignments for IITB_CPU:add_instance|FSM:My_FSM ;
++--------------------------+---------+------+-------------+
+; Assignment               ; Value   ; From ; To          ;
++--------------------------+---------+------+-------------+
+; STATE_MACHINE_PROCESSING ; ONE_HOT ; -    ; State       ;
++--------------------------+---------+------+-------------+
 
 
-+----------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" ;
-+-----------+-------+----------+---------------------------------------+
-; Port      ; Type  ; Severity ; Details                               ;
-+-----------+-------+----------+---------------------------------------+
-; a2[15..1] ; Input ; Info     ; Stuck at GND                          ;
-; a2[0]     ; Input ; Info     ; Stuck at VCC                          ;
-+-----------+-------+----------+---------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" ;
++-----------+-------+----------+-------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                     ;
++-----------+-------+----------+-------------------------------------------------------------+
+; a2[15..1] ; Input ; Info     ; Stuck at GND                                                ;
+; a2[0]     ; Input ; Info     ; Stuck at VCC                                                ;
++-----------+-------+----------+-------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux" ;
-+------+-------+----------+--------------------------------------------+
-; Port ; Type  ; Severity ; Details                                    ;
-+------+-------+----------+--------------------------------------------+
-; a5   ; Input ; Info     ; Stuck at GND                               ;
-; a6   ; Input ; Info     ; Stuck at GND                               ;
-; a7   ; Input ; Info     ; Stuck at GND                               ;
-+------+-------+----------+--------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux" ;
++------+-------+----------+------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                          ;
++------+-------+----------+------------------------------------------------------------------+
+; a5   ; Input ; Info     ; Stuck at GND                                                     ;
+; a6   ; Input ; Info     ; Stuck at GND                                                     ;
+; a7   ; Input ; Info     ; Stuck at GND                                                     ;
++------+-------+----------+------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:D3_Mux" ;
-+------+-------+----------+-----------------------------------------+
-; Port ; Type  ; Severity ; Details                                 ;
-+------+-------+----------+-----------------------------------------+
-; a7   ; Input ; Info     ; Stuck at GND                            ;
-+------+-------+----------+-----------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:D3_Mux" ;
++------+-------+----------+---------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                       ;
++------+-------+----------+---------------------------------------------------------------+
+; a7   ; Input ; Info     ; Stuck at GND                                                  ;
++------+-------+----------+---------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux3_8x1:A3_Mux" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; a4   ; Input ; Info     ; Stuck at VCC                           ;
-; a5   ; Input ; Info     ; Stuck at VCC                           ;
-; a6   ; Input ; Info     ; Stuck at VCC                           ;
-; a7   ; Input ; Info     ; Stuck at VCC                           ;
-+------+-------+----------+----------------------------------------+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_8x1:A3_Mux" ;
++------+-------+----------+--------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                      ;
++------+-------+----------+--------------------------------------------------------------+
+; a4   ; Input ; Info     ; Stuck at VCC                                                 ;
+; a5   ; Input ; Info     ; Stuck at VCC                                                 ;
+; a6   ; Input ; Info     ; Stuck at VCC                                                 ;
+; a7   ; Input ; Info     ; Stuck at VCC                                                 ;
++------+-------+----------+--------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux3_4x1:A1_Mux" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; a1   ; Input ; Info     ; Stuck at VCC                           ;
-; a3   ; Input ; Info     ; Stuck at GND                           ;
-+------+-------+----------+----------------------------------------+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_4x1:A1_Mux" ;
++------+-------+----------+--------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                      ;
++------+-------+----------+--------------------------------------------------------------+
+; a1   ; Input ; Info     ; Stuck at VCC                                                 ;
+; a3   ; Input ; Info     ; Stuck at GND                                                 ;
++------+-------+----------+--------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; a1   ; Input ; Info     ; Stuck at GND                              ;
-+------+-------+----------+-------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Loop_Mux" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; a1   ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -307,10 +307,16 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 28 23:28:11 2022
+    Info: Processing started: Mon Nov 28 23:52:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhdl
+    Info (12022): Found design unit 1: Testbench-Behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Testbench.vhdl Line: 9
+    Info (12023): Found entity 1: Testbench File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Testbench.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhdl
+    Info (12022): Found design unit 1: DUT-DutWrap File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/DUT.vhdl Line: 12
+    Info (12023): Found entity 1: DUT File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/DUT.vhdl Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mux16_8x1.vhd
     Info (12022): Found design unit 1: Mux16_8x1-Dataflow File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_8x1.vhd Line: 17
     Info (12023): Found entity 1: Mux16_8x1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_8x1.vhd Line: 5
@@ -362,8 +368,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file iitb_cpu.vhd
     Info (12022): Found design unit 1: IITB_CPU-arch File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 17
     Info (12023): Found entity 1: IITB_CPU File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 5
-Info (12127): Elaborating entity "IITB_CPU" for the top level hierarchy
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:My_FSM" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 94
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "IITB_CPU" for hierarchy "IITB_CPU:add_instance" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/DUT.vhdl Line: 28
+Info (12128): Elaborating entity "FSM" for hierarchy "IITB_CPU:add_instance|FSM:My_FSM" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 94
 Warning (10492): VHDL Process Statement warning at FSM.vhd(64): signal "instruc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 64
 Warning (10492): VHDL Process Statement warning at FSM.vhd(65): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 65
 Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
@@ -375,10 +382,10 @@ Warning (10492): VHDL Process Statement warning at FSM.vhd(257): signal "loop_co
 Warning (10492): VHDL Process Statement warning at FSM.vhd(262): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 262
 Warning (10492): VHDL Process Statement warning at FSM.vhd(315): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 315
 Warning (10492): VHDL Process Statement warning at FSM.vhd(320): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 320
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:My_Datapath" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 118
-Info (12128): Elaborating entity "Register_16bit" for hierarchy "Datapath:My_Datapath|Register_16bit:T1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 185
-Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 191
-Info (12128): Elaborating entity "Register_file" for hierarchy "Datapath:My_Datapath|Register_file:Reg_File" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 196
+Info (12128): Elaborating entity "Datapath" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 118
+Info (12128): Elaborating entity "Register_16bit" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Register_16bit:T1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 185
+Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Loop_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 191
+Info (12128): Elaborating entity "Register_file" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Register_file:Reg_File" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 196
 Warning (10631): VHDL Process Statement warning at Register_file.vhd(21): inferring latch(es) for signal or variable "Data", which holds its previous value in one or more paths through the process File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
 Info (10041): Inferred latch for "Data[7][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
 Info (10041): Inferred latch for "Data[7][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
@@ -508,24 +515,24 @@ Info (10041): Inferred latch for "Data[0][12]" at Register_file.vhd(21) File: C:
 Info (10041): Inferred latch for "Data[0][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
 Info (10041): Inferred latch for "Data[0][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
 Info (10041): Inferred latch for "Data[0][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
-Info (12128): Elaborating entity "Mux3_4x1" for hierarchy "Datapath:My_Datapath|Mux3_4x1:A1_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 202
-Info (12128): Elaborating entity "Mux3_8x1" for hierarchy "Datapath:My_Datapath|Mux3_8x1:A3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 207
-Info (12128): Elaborating entity "Mux16_8x1" for hierarchy "Datapath:My_Datapath|Mux16_8x1:D3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 213
-Info (12128): Elaborating entity "SE7" for hierarchy "Datapath:My_Datapath|SE7:T2_SE7" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 216
-Info (12128): Elaborating entity "SE10" for hierarchy "Datapath:My_Datapath|SE10:T2_SE10" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 217
-Info (12128): Elaborating entity "Shifter7" for hierarchy "Datapath:My_Datapath|Shifter7:T2_shift" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 218
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:My_Datapath|ALU:alu1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 220
+Info (12128): Elaborating entity "Mux3_4x1" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_4x1:A1_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 202
+Info (12128): Elaborating entity "Mux3_8x1" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_8x1:A3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 207
+Info (12128): Elaborating entity "Mux16_8x1" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:D3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 213
+Info (12128): Elaborating entity "SE7" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|SE7:T2_SE7" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 216
+Info (12128): Elaborating entity "SE10" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|SE10:T2_SE10" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 217
+Info (12128): Elaborating entity "Shifter7" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Shifter7:T2_shift" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 218
+Info (12128): Elaborating entity "ALU" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|ALU:alu1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 220
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(40): object "sum" assigned a value but never read File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 40
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 225
-Info (12128): Elaborating entity "dff_en" for hierarchy "Datapath:My_Datapath|dff_en:carry_dff" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 227
-Info (12128): Elaborating entity "Memory" for hierarchy "Datapath:My_Datapath|Memory:mem" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 230
+Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 225
+Info (12128): Elaborating entity "dff_en" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|dff_en:carry_dff" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 227
+Info (12128): Elaborating entity "Memory" for hierarchy "IITB_CPU:add_instance|Datapath:My_Datapath|Memory:mem" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 230
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "Datapath:My_Datapath|Memory:mem|Data" is uninferred due to asynchronous read logic File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 17
+    Info (276007): RAM logic "IITB_CPU:add_instance|Datapath:My_Datapath|Memory:mem|Data" is uninferred due to asynchronous read logic File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 17
 Error (276003): Cannot convert all sets of registers into RAM megafunctions when creating nodes. The resulting number of registers remaining in design exceeds the number of registers in the device or the number specified by the assignment max_number_of_registers_from_uninferred_rams. This can cause longer compilation time or result in insufficient memory to complete Analysis and Synthesis
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 14 warnings
-    Error: Peak virtual memory: 4788 megabytes
-    Error: Processing ended: Mon Nov 28 23:28:27 2022
-    Error: Elapsed time: 00:00:16
-    Error: Total CPU time (on all processors): 00:00:41
+    Error: Peak virtual memory: 4787 megabytes
+    Error: Processing ended: Mon Nov 28 23:52:26 2022
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:28
 
 

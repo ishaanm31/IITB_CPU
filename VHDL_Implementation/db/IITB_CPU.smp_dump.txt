@@ -1,5 +1,5 @@
 
-State Machine - |IITB_CPU|FSM:My_FSM|State
+State Machine - |DUT|IITB_CPU:add_instance|FSM:My_FSM|State
 Name State.S9 State.S8 State.S7 State.S6 State.S5 State.S4 State.S3 State.S2 State.S1 State.S0 
 State.S0 0 0 0 0 0 0 0 0 0 0 
 State.S1 0 0 0 0 0 0 0 0 1 1 
