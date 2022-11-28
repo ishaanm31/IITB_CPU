@@ -16,7 +16,8 @@ entity FSM is
         ALU_A_sel: out std_logic_vector(2 downto 0);
         ALU_B_sel: out std_logic_vector(1 downto 0);
         T3_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic;
-        loop_sel:out std_logic
+        loop_sel:out std_logic;
+        instruc:in std_logic_vector(15 downto 0)
 		);
 end FSM;
 
@@ -25,6 +26,9 @@ architecture behave of FSM is
     -------ADD-SUM-------------------------------------------------------------
     type FSM_States   is (S0,S1,S2,S3,S4,S5,S6,S7,S8,S9);
     signal State : FSM_States;
+    attribute enum_encoding : string;
+    attribute enum_encoding of FSM_States : type is "one-hot";  -- encoding style of the enumerated type
+
 begin
     
 process(clock)
@@ -57,14 +61,14 @@ process(clock)
         v_T3_sel:='0';
         v_Mem_Add_Sel:='0';
         v_Mem_In_Sel:='0';
-        OP_code:= T2_out(15 downto 12);
+        OP_code:= Instruc(15 downto 12);
         v_LMSM_Imm:=T2_out(7 downto 0);
         v_loop_sel:='0';
         Flag:= (((not (T2_out(1))) and (not(T2_out(0)))) or (T2_out(1)and C_flag) or (T2_out(0)and Z_flag));
 
 case State is --  making cases for states 
  
-            --------------------------		    
+--------------------------		    
     when S0 =>
         v_A1_sel:="01";
         v_T1_WR:='1' ;

@@ -34,7 +34,8 @@ architecture arch of IITB_CPU is
             ALU_A_sel: out std_logic_vector(2 downto 0);
             ALU_B_sel: out std_logic_vector(1 downto 0);
             T3_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic;
-            loop_sel:out std_logic
+            loop_sel:out std_logic;
+            instruc:in std_logic_vector(15 downto 0)
             );
     end component;
 
@@ -61,7 +62,8 @@ architecture arch of IITB_CPU is
             loop_count:buffer std_logic_vector(15 downto 0);
             --External Memory Control
             Mem_Ext_WR:in std_logic;
-            Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0)
+            Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0);
+            instruc:out std_logic_vector(15 downto 0)
             );
     end component;
 --Initiating Signals to connect FSM to Datapath and mapping Input outputs of the whole machine
@@ -85,8 +87,9 @@ architecture arch of IITB_CPU is
             signal  S_T2_out : std_logic_vector(15 downto 0);
             signal S_loop_count: std_logic_vector(15 downto 0);
     --Test Vector Output of the Machine
-        signal S_T1_out,S_T3_out:  std_logic_vector(15 downto 0);
+        signal S_T1_out,S_T3_out,S_instruc:  std_logic_vector(15 downto 0);
         signal S_loop_sel:std_logic;
+        
 begin
     My_FSM: FSM port map(
         clock=>clock, reset=>reset, 
@@ -107,7 +110,8 @@ begin
         loop_count_WR=> S_loop_count_WR,
         ALU_A_sel=> S_ALU_A_sel,
         ALU_B_sel=> S_ALU_B_sel,
-        T3_sel=>S_T3_sel , Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel
+        T3_sel=>S_T3_sel , Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel,
+        instruc=>S_instruc
     );
 
     
@@ -138,6 +142,7 @@ begin
         Mem_Ext_WR=>Mem_Ext_WR,
         Mem_Ext_Data_in=> Mem_Ext_Data_in,
         Mem_Ext_Add =>Mem_Ext_Add,
-        loop_sel=>S_loop_sel
+        loop_sel=>S_loop_sel,
+        instruc=>S_instruc
     );
 end architecture arch;

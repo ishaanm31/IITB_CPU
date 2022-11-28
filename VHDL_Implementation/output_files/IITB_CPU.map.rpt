@@ -1,5 +1,5 @@
-Analysis & Elaboration report for IITB_CPU
-Mon Nov 28 05:04:24 2022
+Analysis & Synthesis report for IITB_CPU
+Mon Nov 28 23:28:26 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,16 +7,21 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux"
-  6. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux"
-  7. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:D3_Mux"
-  8. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_8x1:A3_Mux"
-  9. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_4x1:A1_Mux"
- 10. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_2x1:Loop_Mux"
- 11. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. State Machine - |IITB_CPU|FSM:My_FSM|State
+  6. Registers Packed Into Inferred Megafunctions
+  7. Multiplexer Restructuring Statistics (Restructuring Performed)
+  8. Source assignments for FSM:My_FSM
+  9. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux"
+ 10. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux"
+ 11. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:D3_Mux"
+ 12. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_8x1:A3_Mux"
+ 13. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_4x1:A1_Mux"
+ 14. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_2x1:Loop_Mux"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -41,9 +46,9 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Nov 28 05:04:24 2022       ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 28 23:28:26 2022           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; IITB_CPU                                    ;
@@ -62,24 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -164,6 +153,84 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |IITB_CPU|FSM:My_FSM|State                                                                             ;
++----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; Name     ; State.S9 ; State.S8 ; State.S7 ; State.S6 ; State.S5 ; State.S4 ; State.S3 ; State.S2 ; State.S1 ; State.S0 ;
++----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; State.S0 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; State.S1 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; State.S2 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; State.S3 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; State.S4 ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
+; State.S5 ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; State.S6 ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; State.S7 ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; State.S8 ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; State.S9 ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                            ;
++-----------------------------------------------------+--------------------------------------------+------+
+; Register Name                                       ; Megafunction                               ; Type ;
++-----------------------------------------------------+--------------------------------------------+------+
+; Datapath:My_Datapath|Memory:mem|Mem_Data_Out[0..15] ; Datapath:My_Datapath|Memory:mem|Data_rtl_0 ; RAM  ;
++-----------------------------------------------------+--------------------------------------------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |IITB_CPU|Datapath:My_Datapath|Register_16bit:T4|Data[15]   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux3_4x1:A1_Mux|Mux0         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|FSM:My_FSM|v_A3_sel                               ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|ALU:alu1|ALU_c[5]            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux|Mux7     ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux|Mux11    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_In_Mux|F[0]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_Add_Mux|F[15]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |IITB_CPU|FSM:My_FSM|v_alu_sel                              ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Register_file:Reg_File|Mux13 ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 30 LEs               ; 20 LEs                 ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux0     ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux11    ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux3        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux11       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:D3_Mux|Mux7        ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux3_8x1:A3_Mux|Mux1         ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux|Mux13    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Source assignments for FSM:My_FSM                 ;
++--------------------------+---------+------+-------+
+; Assignment               ; Value   ; From ; To    ;
++--------------------------+---------+------+-------+
+; STATE_MACHINE_PROCESSING ; ONE_HOT ; -    ; State ;
++--------------------------+---------+------+-------+
+
+
 +----------------------------------------------------------------------+
 ; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" ;
 +-----------+-------+----------+---------------------------------------+
@@ -225,14 +292,23 @@ https://fpgasoftware.intel.com/eula.
 +------+-------+----------+-------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 28 05:04:10 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU --analysis_and_elaboration
+    Info: Processing started: Mon Nov 28 23:28:11 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mux16_8x1.vhd
@@ -248,7 +324,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file se7.vhd
     Info (12022): Found design unit 1: SE7-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/SE7.vhd Line: 10
     Info (12023): Found entity 1: SE7 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/SE7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
-    Info (12022): Found design unit 1: Register_File-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 12
+    Info (12022): Found design unit 1: Register_File-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 13
     Info (12023): Found entity 1: Register_file File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_16bit.vhd
     Info (12022): Found design unit 1: Register_16bit-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_16bit.vhd Line: 11
@@ -269,7 +345,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux3_2x
     Info (12022): Found design unit 1: Mux3_4x1-Dataflow1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux3_2x1.vhd Line: 12
     Info (12023): Found entity 1: Mux3_4x1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux3_2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
-    Info (12022): Found design unit 1: Memory-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 12
+    Info (12022): Found design unit 1: Memory-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 15
     Info (12023): Found entity 1: Memory File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dff_en.vhd
     Info (12022): Found design unit 1: dff_en-behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/dff_en.vhd Line: 13
@@ -278,46 +354,178 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: ALU-behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 15
     Info (12023): Found entity 1: ALU File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhdl
-    Info (12022): Found design unit 1: Datapath-Struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 32
+    Info (12022): Found design unit 1: Datapath-Struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 33
     Info (12023): Found entity 1: Datapath File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
-    Info (12022): Found design unit 1: FSM-behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 24
+    Info (12022): Found design unit 1: FSM-behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 25
     Info (12023): Found entity 1: FSM File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file iitb_cpu.vhd
     Info (12022): Found design unit 1: IITB_CPU-arch File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 17
     Info (12023): Found entity 1: IITB_CPU File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 5
 Info (12127): Elaborating entity "IITB_CPU" for the top level hierarchy
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:My_FSM" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at FSM.vhd(60): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 60
-Warning (10492): VHDL Process Statement warning at FSM.vhd(61): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at FSM.vhd(63): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at FSM.vhd(63): signal "C_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at FSM.vhd(63): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at FSM.vhd(65): signal "State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 65
-Warning (10492): VHDL Process Statement warning at FSM.vhd(219): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 219
-Warning (10492): VHDL Process Statement warning at FSM.vhd(253): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 253
-Warning (10492): VHDL Process Statement warning at FSM.vhd(258): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 258
-Warning (10492): VHDL Process Statement warning at FSM.vhd(311): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 311
-Warning (10492): VHDL Process Statement warning at FSM.vhd(316): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 316
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:My_Datapath" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 114
-Info (12128): Elaborating entity "Register_16bit" for hierarchy "Datapath:My_Datapath|Register_16bit:T1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 180
-Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 186
-Info (12128): Elaborating entity "Register_file" for hierarchy "Datapath:My_Datapath|Register_file:Reg_File" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 191
-Info (12128): Elaborating entity "Mux3_4x1" for hierarchy "Datapath:My_Datapath|Mux3_4x1:A1_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 197
-Info (12128): Elaborating entity "Mux3_8x1" for hierarchy "Datapath:My_Datapath|Mux3_8x1:A3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 202
-Info (12128): Elaborating entity "Mux16_8x1" for hierarchy "Datapath:My_Datapath|Mux16_8x1:D3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 208
-Info (12128): Elaborating entity "SE7" for hierarchy "Datapath:My_Datapath|SE7:T2_SE7" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 211
-Info (12128): Elaborating entity "SE10" for hierarchy "Datapath:My_Datapath|SE10:T2_SE10" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 212
-Info (12128): Elaborating entity "Shifter7" for hierarchy "Datapath:My_Datapath|Shifter7:T2_shift" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 213
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:My_Datapath|ALU:alu1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 215
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:My_FSM" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at FSM.vhd(64): signal "instruc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at FSM.vhd(65): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "C_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at FSM.vhd(69): signal "State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at FSM.vhd(223): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 223
+Warning (10492): VHDL Process Statement warning at FSM.vhd(257): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 257
+Warning (10492): VHDL Process Statement warning at FSM.vhd(262): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 262
+Warning (10492): VHDL Process Statement warning at FSM.vhd(315): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 315
+Warning (10492): VHDL Process Statement warning at FSM.vhd(320): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 320
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:My_Datapath" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 118
+Info (12128): Elaborating entity "Register_16bit" for hierarchy "Datapath:My_Datapath|Register_16bit:T1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 185
+Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 191
+Info (12128): Elaborating entity "Register_file" for hierarchy "Datapath:My_Datapath|Register_file:Reg_File" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 196
+Warning (10631): VHDL Process Statement warning at Register_file.vhd(21): inferring latch(es) for signal or variable "Data", which holds its previous value in one or more paths through the process File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[7][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[6][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[5][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[4][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[3][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[2][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[1][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][0]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][1]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][2]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][3]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][4]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][5]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][6]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][7]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][8]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][9]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][10]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][11]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][12]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][13]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][14]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (10041): Inferred latch for "Data[0][15]" at Register_file.vhd(21) File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 21
+Info (12128): Elaborating entity "Mux3_4x1" for hierarchy "Datapath:My_Datapath|Mux3_4x1:A1_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 202
+Info (12128): Elaborating entity "Mux3_8x1" for hierarchy "Datapath:My_Datapath|Mux3_8x1:A3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 207
+Info (12128): Elaborating entity "Mux16_8x1" for hierarchy "Datapath:My_Datapath|Mux16_8x1:D3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 213
+Info (12128): Elaborating entity "SE7" for hierarchy "Datapath:My_Datapath|SE7:T2_SE7" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 216
+Info (12128): Elaborating entity "SE10" for hierarchy "Datapath:My_Datapath|SE10:T2_SE10" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 217
+Info (12128): Elaborating entity "Shifter7" for hierarchy "Datapath:My_Datapath|Shifter7:T2_shift" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 218
+Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:My_Datapath|ALU:alu1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 220
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(40): object "sum" assigned a value but never read File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 40
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 220
-Info (12128): Elaborating entity "dff_en" for hierarchy "Datapath:My_Datapath|dff_en:carry_dff" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 222
-Info (12128): Elaborating entity "Memory" for hierarchy "Datapath:My_Datapath|Memory:mem" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 225
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Mon Nov 28 05:04:24 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:38
+Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 225
+Info (12128): Elaborating entity "dff_en" for hierarchy "Datapath:My_Datapath|dff_en:carry_dff" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 227
+Info (12128): Elaborating entity "Memory" for hierarchy "Datapath:My_Datapath|Memory:mem" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 230
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "Datapath:My_Datapath|Memory:mem|Data" is uninferred due to asynchronous read logic File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 17
+Error (276003): Cannot convert all sets of registers into RAM megafunctions when creating nodes. The resulting number of registers remaining in design exceeds the number of registers in the device or the number specified by the assignment max_number_of_registers_from_uninferred_rams. This can cause longer compilation time or result in insufficient memory to complete Analysis and Synthesis
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 14 warnings
+    Error: Peak virtual memory: 4788 megabytes
+    Error: Processing ended: Mon Nov 28 23:28:27 2022
+    Error: Elapsed time: 00:00:16
+    Error: Total CPU time (on all processors): 00:00:41
 
 

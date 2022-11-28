@@ -25,7 +25,8 @@ entity Datapath is
         loop_count:buffer std_logic_vector(15 downto 0);
         --External Memory Updating Pins
         Mem_Ext_WR :in std_logic;
-        Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0)
+        Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0);
+        instruc:out std_logic_vector(15 downto 0)
 		);
 end Datapath;
 
@@ -72,6 +73,7 @@ architecture Struct of Datapath is
         port (A1, A2, A3: in std_logic_vector(2 downto 0 );
               D3: in std_logic_vector(15 downto 0);
               clock,Write_Enable:in std_logic;
+              PC:out std_logic_vector(15 downto 0);
               D1, D2: out std_logic_vector(15 downto 0));
         end component;
     
@@ -106,6 +108,8 @@ architecture Struct of Datapath is
     component Memory is
         port (Mem_Add: in std_logic_vector(15 downto 0);
         Mem_Data_In:in std_logic_vector(15 downto 0);
+        PC_Add:in std_logic_vector(15 downto 0);
+        Instruction_out:out std_logic_vector(15 downto 0);
         clock,Write_Enable:in std_logic;
         Mem_Data_Out:out std_logic_vector(15 downto 0));
     end component;
@@ -159,6 +163,7 @@ architecture Struct of Datapath is
     
     --Signals for Register File:
     signal D1,D2,D3: std_logic_vector(15 downto 0);
+    signal PC:std_logic_vector(15 downto 0);
     signal A1,A2,A3: std_logic_vector(2 downto 0);
     
     --Signals for temporary Registers.
@@ -172,7 +177,7 @@ architecture Struct of Datapath is
     signal T2_7Shift_out: std_logic_vector(15 downto 0);
 
     --Signals for memory:
-    signal mem_add,mem_add_internal,mem_in_internal,mem_out,mem_in: std_logic_vector(15 downto 0);
+    signal mem_add,mem_add_internal,mem_in_internal,mem_out,mem_in : std_logic_vector(15 downto 0);
     signal mem_WR: std_logic;
     
 begin
@@ -188,7 +193,7 @@ begin
     T3_Mux: MUX16_2x1 port map(A0=> D1,A1=> alu_c, sel =>T3_sel, F=>T3_in);
 
 --Register File Instantiate
-    Reg_File: Register_file port map (A1, A2, A3, D3, clock, Reg_file_EN, D1, D2);
+    Reg_File: Register_file port map (A1, A2, A3, D3, clock, Reg_file_EN, PC, D1, D2);
 --A2 needs no Mux, it has only one input
     A2 <= T2_out(8 downto 6);
 
@@ -222,7 +227,7 @@ begin
     carry_dff: dff_en port map(clk => clock, reset => reset, en => C_ctrl, d => carry_dff_inp, q => C_flag);
     zero_dff: dff_en port map(clk => clock, reset => reset, en => Z_ctrl, d => zero_dff_inp, q => Z_flag);
     
-    mem : Memory port map(Mem_Add => mem_add, Mem_Data_In => mem_in,Write_Enable => mem_WR,clock => clock, Mem_Data_Out => mem_out);
+    mem : Memory port map(Mem_Add => mem_add, Mem_Data_In => mem_in,Write_Enable => mem_WR,PC_Add=>PC,Instruction_out=>Instruc,clock => clock, Mem_Data_Out => mem_out);
     Mem_Add_Mux_Internal : Mux16_2x1 port map(A0 => D1, A1 =>T3_out, sel =>Mem_Add_Sel,F =>mem_add_internal);
     Mem_In_Mux_Internal : Mux16_2x1 port map(A0 =>T4_out, A1 => D1, sel =>Mem_In_Sel,F =>mem_in_internal);
 
