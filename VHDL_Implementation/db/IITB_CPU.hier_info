@@ -1,74 +1,4 @@
-|DUT
-input_vector[0] => IITB_CPU:add_instance.clock
-input_vector[1] => IITB_CPU:add_instance.Reset
-input_vector[2] => IITB_CPU:add_instance.Mem_Ext_WR
-input_vector[3] => IITB_CPU:add_instance.Mem_Ext_Data_in[0]
-input_vector[4] => IITB_CPU:add_instance.Mem_Ext_Data_in[1]
-input_vector[5] => IITB_CPU:add_instance.Mem_Ext_Data_in[2]
-input_vector[6] => IITB_CPU:add_instance.Mem_Ext_Data_in[3]
-input_vector[7] => IITB_CPU:add_instance.Mem_Ext_Data_in[4]
-input_vector[8] => IITB_CPU:add_instance.Mem_Ext_Data_in[5]
-input_vector[9] => IITB_CPU:add_instance.Mem_Ext_Data_in[6]
-input_vector[10] => IITB_CPU:add_instance.Mem_Ext_Data_in[7]
-input_vector[11] => IITB_CPU:add_instance.Mem_Ext_Data_in[8]
-input_vector[12] => IITB_CPU:add_instance.Mem_Ext_Data_in[9]
-input_vector[13] => IITB_CPU:add_instance.Mem_Ext_Data_in[10]
-input_vector[14] => IITB_CPU:add_instance.Mem_Ext_Data_in[11]
-input_vector[15] => IITB_CPU:add_instance.Mem_Ext_Data_in[12]
-input_vector[16] => IITB_CPU:add_instance.Mem_Ext_Data_in[13]
-input_vector[17] => IITB_CPU:add_instance.Mem_Ext_Data_in[14]
-input_vector[18] => IITB_CPU:add_instance.Mem_Ext_Data_in[15]
-input_vector[19] => IITB_CPU:add_instance.Mem_Ext_Add[0]
-input_vector[20] => IITB_CPU:add_instance.Mem_Ext_Add[1]
-input_vector[21] => IITB_CPU:add_instance.Mem_Ext_Add[2]
-input_vector[22] => IITB_CPU:add_instance.Mem_Ext_Add[3]
-input_vector[23] => IITB_CPU:add_instance.Mem_Ext_Add[4]
-input_vector[24] => IITB_CPU:add_instance.Mem_Ext_Add[5]
-input_vector[25] => IITB_CPU:add_instance.Mem_Ext_Add[6]
-input_vector[26] => IITB_CPU:add_instance.Mem_Ext_Add[7]
-input_vector[27] => IITB_CPU:add_instance.Mem_Ext_Add[8]
-input_vector[28] => IITB_CPU:add_instance.Mem_Ext_Add[9]
-input_vector[29] => IITB_CPU:add_instance.Mem_Ext_Add[10]
-input_vector[30] => IITB_CPU:add_instance.Mem_Ext_Add[11]
-input_vector[31] => IITB_CPU:add_instance.Mem_Ext_Add[12]
-input_vector[32] => IITB_CPU:add_instance.Mem_Ext_Add[13]
-input_vector[33] => IITB_CPU:add_instance.Mem_Ext_Add[14]
-input_vector[34] => IITB_CPU:add_instance.Mem_Ext_Add[15]
-output_vector[0] << IITB_CPU:add_instance.T3_test[0]
-output_vector[1] << IITB_CPU:add_instance.T3_test[1]
-output_vector[2] << IITB_CPU:add_instance.T3_test[2]
-output_vector[3] << IITB_CPU:add_instance.T3_test[3]
-output_vector[4] << IITB_CPU:add_instance.T3_test[4]
-output_vector[5] << IITB_CPU:add_instance.T3_test[5]
-output_vector[6] << IITB_CPU:add_instance.T3_test[6]
-output_vector[7] << IITB_CPU:add_instance.T3_test[7]
-output_vector[8] << IITB_CPU:add_instance.T3_test[8]
-output_vector[9] << IITB_CPU:add_instance.T3_test[9]
-output_vector[10] << IITB_CPU:add_instance.T3_test[10]
-output_vector[11] << IITB_CPU:add_instance.T3_test[11]
-output_vector[12] << IITB_CPU:add_instance.T3_test[12]
-output_vector[13] << IITB_CPU:add_instance.T3_test[13]
-output_vector[14] << IITB_CPU:add_instance.T3_test[14]
-output_vector[15] << IITB_CPU:add_instance.T3_test[15]
-output_vector[16] << IITB_CPU:add_instance.PC_test[0]
-output_vector[17] << IITB_CPU:add_instance.PC_test[1]
-output_vector[18] << IITB_CPU:add_instance.PC_test[2]
-output_vector[19] << IITB_CPU:add_instance.PC_test[3]
-output_vector[20] << IITB_CPU:add_instance.PC_test[4]
-output_vector[21] << IITB_CPU:add_instance.PC_test[5]
-output_vector[22] << IITB_CPU:add_instance.PC_test[6]
-output_vector[23] << IITB_CPU:add_instance.PC_test[7]
-output_vector[24] << IITB_CPU:add_instance.PC_test[8]
-output_vector[25] << IITB_CPU:add_instance.PC_test[9]
-output_vector[26] << IITB_CPU:add_instance.PC_test[10]
-output_vector[27] << IITB_CPU:add_instance.PC_test[11]
-output_vector[28] << IITB_CPU:add_instance.PC_test[12]
-output_vector[29] << IITB_CPU:add_instance.PC_test[13]
-output_vector[30] << IITB_CPU:add_instance.PC_test[14]
-output_vector[31] << IITB_CPU:add_instance.PC_test[15]
-
-
-|DUT|IITB_CPU:add_instance
+|IITB_CPU
 clock => FSM:My_FSM.clock
 clock => Datapath:My_Datapath.clock
 Reset => FSM:My_FSM.reset
@@ -106,41 +36,9 @@ Mem_Ext_Add[12] => Datapath:My_Datapath.Mem_Ext_Add[12]
 Mem_Ext_Add[13] => Datapath:My_Datapath.Mem_Ext_Add[13]
 Mem_Ext_Add[14] => Datapath:My_Datapath.Mem_Ext_Add[14]
 Mem_Ext_Add[15] => Datapath:My_Datapath.Mem_Ext_Add[15]
-PC_test[0] <= Datapath:My_Datapath.T1_out[0]
-PC_test[1] <= Datapath:My_Datapath.T1_out[1]
-PC_test[2] <= Datapath:My_Datapath.T1_out[2]
-PC_test[3] <= Datapath:My_Datapath.T1_out[3]
-PC_test[4] <= Datapath:My_Datapath.T1_out[4]
-PC_test[5] <= Datapath:My_Datapath.T1_out[5]
-PC_test[6] <= Datapath:My_Datapath.T1_out[6]
-PC_test[7] <= Datapath:My_Datapath.T1_out[7]
-PC_test[8] <= Datapath:My_Datapath.T1_out[8]
-PC_test[9] <= Datapath:My_Datapath.T1_out[9]
-PC_test[10] <= Datapath:My_Datapath.T1_out[10]
-PC_test[11] <= Datapath:My_Datapath.T1_out[11]
-PC_test[12] <= Datapath:My_Datapath.T1_out[12]
-PC_test[13] <= Datapath:My_Datapath.T1_out[13]
-PC_test[14] <= Datapath:My_Datapath.T1_out[14]
-PC_test[15] <= Datapath:My_Datapath.T1_out[15]
-T3_test[0] <= Datapath:My_Datapath.T3_out[0]
-T3_test[1] <= Datapath:My_Datapath.T3_out[1]
-T3_test[2] <= Datapath:My_Datapath.T3_out[2]
-T3_test[3] <= Datapath:My_Datapath.T3_out[3]
-T3_test[4] <= Datapath:My_Datapath.T3_out[4]
-T3_test[5] <= Datapath:My_Datapath.T3_out[5]
-T3_test[6] <= Datapath:My_Datapath.T3_out[6]
-T3_test[7] <= Datapath:My_Datapath.T3_out[7]
-T3_test[8] <= Datapath:My_Datapath.T3_out[8]
-T3_test[9] <= Datapath:My_Datapath.T3_out[9]
-T3_test[10] <= Datapath:My_Datapath.T3_out[10]
-T3_test[11] <= Datapath:My_Datapath.T3_out[11]
-T3_test[12] <= Datapath:My_Datapath.T3_out[12]
-T3_test[13] <= Datapath:My_Datapath.T3_out[13]
-T3_test[14] <= Datapath:My_Datapath.T3_out[14]
-T3_test[15] <= Datapath:My_Datapath.T3_out[15]
 
 
-|DUT|IITB_CPU:add_instance|FSM:My_FSM
+|IITB_CPU|FSM:My_FSM
 clock => State~1.DATAIN
 reset => State.OUTPUTSELECT
 reset => State.OUTPUTSELECT
@@ -280,7 +178,7 @@ instruc[15] => Equal9.IN0
 instruc[15] => Equal10.IN2
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath
+|IITB_CPU|Datapath:My_Datapath
 clock => Register_16bit:T1.clock
 clock => Register_16bit:T2.clock
 clock => Register_16bit:T3.clock
@@ -322,22 +220,6 @@ Mem_In_Sel => Mux16_2x1:Mem_In_Mux_Internal.sel
 loop_sel => Mux16_2x1:Loop_Mux.sel
 Z_flag <= dff_en:zero_dff.q
 C_flag <= dff_en:carry_dff.q
-T1_out[0] <= Register_16bit:T1.DataOut[0]
-T1_out[1] <= Register_16bit:T1.DataOut[1]
-T1_out[2] <= Register_16bit:T1.DataOut[2]
-T1_out[3] <= Register_16bit:T1.DataOut[3]
-T1_out[4] <= Register_16bit:T1.DataOut[4]
-T1_out[5] <= Register_16bit:T1.DataOut[5]
-T1_out[6] <= Register_16bit:T1.DataOut[6]
-T1_out[7] <= Register_16bit:T1.DataOut[7]
-T1_out[8] <= Register_16bit:T1.DataOut[8]
-T1_out[9] <= Register_16bit:T1.DataOut[9]
-T1_out[10] <= Register_16bit:T1.DataOut[10]
-T1_out[11] <= Register_16bit:T1.DataOut[11]
-T1_out[12] <= Register_16bit:T1.DataOut[12]
-T1_out[13] <= Register_16bit:T1.DataOut[13]
-T1_out[14] <= Register_16bit:T1.DataOut[14]
-T1_out[15] <= Register_16bit:T1.DataOut[15]
 T2_out[0] <= Register_16bit:T2.DataOut[0]
 T2_out[1] <= Register_16bit:T2.DataOut[1]
 T2_out[2] <= Register_16bit:T2.DataOut[2]
@@ -354,22 +236,6 @@ T2_out[12] <= Register_16bit:T2.DataOut[12]
 T2_out[13] <= Register_16bit:T2.DataOut[13]
 T2_out[14] <= Register_16bit:T2.DataOut[14]
 T2_out[15] <= Register_16bit:T2.DataOut[15]
-T3_out[0] <= Register_16bit:T3.DataOut[0]
-T3_out[1] <= Register_16bit:T3.DataOut[1]
-T3_out[2] <= Register_16bit:T3.DataOut[2]
-T3_out[3] <= Register_16bit:T3.DataOut[3]
-T3_out[4] <= Register_16bit:T3.DataOut[4]
-T3_out[5] <= Register_16bit:T3.DataOut[5]
-T3_out[6] <= Register_16bit:T3.DataOut[6]
-T3_out[7] <= Register_16bit:T3.DataOut[7]
-T3_out[8] <= Register_16bit:T3.DataOut[8]
-T3_out[9] <= Register_16bit:T3.DataOut[9]
-T3_out[10] <= Register_16bit:T3.DataOut[10]
-T3_out[11] <= Register_16bit:T3.DataOut[11]
-T3_out[12] <= Register_16bit:T3.DataOut[12]
-T3_out[13] <= Register_16bit:T3.DataOut[13]
-T3_out[14] <= Register_16bit:T3.DataOut[14]
-T3_out[15] <= Register_16bit:T3.DataOut[15]
 loop_count[0] <= Register_16bit:loop_register.DataOut[0]
 loop_count[1] <= Register_16bit:loop_register.DataOut[1]
 loop_count[2] <= Register_16bit:loop_register.DataOut[2]
@@ -440,7 +306,7 @@ instruc[14] <= Memory:mem.Instruction_out[14]
 instruc[15] <= Memory:mem.Instruction_out[15]
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_16bit:T1
+|IITB_CPU|Datapath:My_Datapath|Register_16bit:T1
 DataIn[0] => Data[0].DATAIN
 DataIn[1] => Data[1].DATAIN
 DataIn[2] => Data[2].DATAIN
@@ -523,7 +389,7 @@ DataOut[14] <= DataOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOut[15] <= DataOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_16bit:T2
+|IITB_CPU|Datapath:My_Datapath|Register_16bit:T2
 DataIn[0] => Data[0].DATAIN
 DataIn[1] => Data[1].DATAIN
 DataIn[2] => Data[2].DATAIN
@@ -606,7 +472,7 @@ DataOut[14] <= DataOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOut[15] <= DataOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_16bit:T3
+|IITB_CPU|Datapath:My_Datapath|Register_16bit:T3
 DataIn[0] => Data[0].DATAIN
 DataIn[1] => Data[1].DATAIN
 DataIn[2] => Data[2].DATAIN
@@ -689,7 +555,7 @@ DataOut[14] <= DataOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOut[15] <= DataOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_16bit:T4
+|IITB_CPU|Datapath:My_Datapath|Register_16bit:T4
 DataIn[0] => Data[0].DATAIN
 DataIn[1] => Data[1].DATAIN
 DataIn[2] => Data[2].DATAIN
@@ -772,7 +638,7 @@ DataOut[14] <= DataOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOut[15] <= DataOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_16bit:loop_register
+|IITB_CPU|Datapath:My_Datapath|Register_16bit:loop_register
 DataIn[0] => Data[0].DATAIN
 DataIn[1] => Data[1].DATAIN
 DataIn[2] => Data[2].DATAIN
@@ -855,7 +721,7 @@ DataOut[14] <= DataOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOut[15] <= DataOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Loop_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Loop_Mux
 A0[0] => F.DATAB
 A0[1] => F.DATAB
 A0[2] => F.DATAB
@@ -922,7 +788,7 @@ F[14] <= F.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= F.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:T3_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux16_2x1:T3_Mux
 A0[0] => F.DATAB
 A0[1] => F.DATAB
 A0[2] => F.DATAB
@@ -989,7 +855,7 @@ F[14] <= F.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= F.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Register_file:Reg_File
+|IITB_CPU|Datapath:My_Datapath|Register_file:Reg_File
 A1[0] => Mux0.IN2
 A1[0] => Mux1.IN2
 A1[0] => Mux2.IN2
@@ -1523,7 +1389,7 @@ D2[14] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
 D2[15] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_4x1:A1_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux3_4x1:A1_Mux
 A0[0] => Mux2.IN0
 A0[1] => Mux1.IN0
 A0[2] => Mux0.IN0
@@ -1547,7 +1413,7 @@ F[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 F[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux3_8x1:A3_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux3_8x1:A3_Mux
 A0[0] => Mux2.IN0
 A0[1] => Mux1.IN0
 A0[2] => Mux0.IN0
@@ -1586,7 +1452,7 @@ F[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 F[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:D3_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux16_8x1:D3_Mux
 A0[0] => Mux15.IN0
 A0[1] => Mux14.IN0
 A0[2] => Mux13.IN0
@@ -1781,7 +1647,7 @@ F[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|SE7:T2_SE7
+|IITB_CPU|Datapath:My_Datapath|SE7:T2_SE7
 Raw[0] => Outp[0].DATAIN
 Raw[1] => Outp[1].DATAIN
 Raw[2] => Outp[2].DATAIN
@@ -1809,7 +1675,7 @@ Outp[14] <= <GND>
 Outp[15] <= <GND>
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|SE10:T2_SE10
+|IITB_CPU|Datapath:My_Datapath|SE10:T2_SE10
 Raw[0] => Output[0].DATAIN
 Raw[1] => Output[1].DATAIN
 Raw[2] => Output[2].DATAIN
@@ -1834,7 +1700,7 @@ Output[14] <= <GND>
 Output[15] <= <GND>
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Shifter7:T2_shift
+|IITB_CPU|Datapath:My_Datapath|Shifter7:T2_shift
 Raw[0] => Outp[7].DATAIN
 Raw[1] => Outp[8].DATAIN
 Raw[2] => Outp[9].DATAIN
@@ -1862,7 +1728,7 @@ Outp[14] <= Raw[7].DB_MAX_OUTPUT_PORT_TYPE
 Outp[15] <= Raw[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|ALU:alu1
+|IITB_CPU|Datapath:My_Datapath|ALU:alu1
 sel[0] => Equal0.IN1
 sel[0] => Equal2.IN1
 sel[0] => Equal4.IN0
@@ -2107,7 +1973,7 @@ C_F <= carry.DB_MAX_OUTPUT_PORT_TYPE
 Z_F <= Z_F.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux
 A0[0] => Mux15.IN0
 A0[1] => Mux14.IN0
 A0[2] => Mux13.IN0
@@ -2302,7 +2168,7 @@ F[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux
 A0[0] => Mux15.IN0
 A0[1] => Mux14.IN0
 A0[2] => Mux13.IN0
@@ -2417,7 +2283,7 @@ F[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|dff_en:carry_dff
+|IITB_CPU|Datapath:My_Datapath|dff_en:carry_dff
 clk => q_reg.CLK
 reset => q_reg.ACLR
 en => q_reg.ENA
@@ -2425,7 +2291,7 @@ d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|dff_en:zero_dff
+|IITB_CPU|Datapath:My_Datapath|dff_en:zero_dff
 clk => q_reg.CLK
 reset => q_reg.ACLR
 en => q_reg.ENA
@@ -2433,86 +2299,74 @@ d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Memory:mem
-Mem_Add[0] => Data~15.DATAIN
+|IITB_CPU|Datapath:My_Datapath|Memory:mem
+Mem_Add[0] => Data~9.DATAIN
 Mem_Add[0] => Data.WADDR
 Mem_Add[0] => Data.PORTBRADDR
-Mem_Add[1] => Data~14.DATAIN
+Mem_Add[1] => Data~8.DATAIN
 Mem_Add[1] => Data.WADDR1
 Mem_Add[1] => Data.PORTBRADDR1
-Mem_Add[2] => Data~13.DATAIN
+Mem_Add[2] => Data~7.DATAIN
 Mem_Add[2] => Data.WADDR2
 Mem_Add[2] => Data.PORTBRADDR2
-Mem_Add[3] => Data~12.DATAIN
+Mem_Add[3] => Data~6.DATAIN
 Mem_Add[3] => Data.WADDR3
 Mem_Add[3] => Data.PORTBRADDR3
-Mem_Add[4] => Data~11.DATAIN
+Mem_Add[4] => Data~5.DATAIN
 Mem_Add[4] => Data.WADDR4
 Mem_Add[4] => Data.PORTBRADDR4
-Mem_Add[5] => Data~10.DATAIN
+Mem_Add[5] => Data~4.DATAIN
 Mem_Add[5] => Data.WADDR5
 Mem_Add[5] => Data.PORTBRADDR5
-Mem_Add[6] => Data~9.DATAIN
+Mem_Add[6] => Data~3.DATAIN
 Mem_Add[6] => Data.WADDR6
 Mem_Add[6] => Data.PORTBRADDR6
-Mem_Add[7] => Data~8.DATAIN
+Mem_Add[7] => Data~2.DATAIN
 Mem_Add[7] => Data.WADDR7
 Mem_Add[7] => Data.PORTBRADDR7
-Mem_Add[8] => Data~7.DATAIN
+Mem_Add[8] => Data~1.DATAIN
 Mem_Add[8] => Data.WADDR8
 Mem_Add[8] => Data.PORTBRADDR8
-Mem_Add[9] => Data~6.DATAIN
+Mem_Add[9] => Data~0.DATAIN
 Mem_Add[9] => Data.WADDR9
 Mem_Add[9] => Data.PORTBRADDR9
-Mem_Add[10] => Data~5.DATAIN
-Mem_Add[10] => Data.WADDR10
-Mem_Add[10] => Data.PORTBRADDR10
-Mem_Add[11] => Data~4.DATAIN
-Mem_Add[11] => Data.WADDR11
-Mem_Add[11] => Data.PORTBRADDR11
-Mem_Add[12] => Data~3.DATAIN
-Mem_Add[12] => Data.WADDR12
-Mem_Add[12] => Data.PORTBRADDR12
-Mem_Add[13] => Data~2.DATAIN
-Mem_Add[13] => Data.WADDR13
-Mem_Add[13] => Data.PORTBRADDR13
-Mem_Add[14] => Data~1.DATAIN
-Mem_Add[14] => Data.WADDR14
-Mem_Add[14] => Data.PORTBRADDR14
-Mem_Add[15] => Data~0.DATAIN
-Mem_Add[15] => Data.WADDR15
-Mem_Add[15] => Data.PORTBRADDR15
-Mem_Data_In[0] => Data~31.DATAIN
+Mem_Add[10] => ~NO_FANOUT~
+Mem_Add[11] => ~NO_FANOUT~
+Mem_Add[12] => ~NO_FANOUT~
+Mem_Add[13] => ~NO_FANOUT~
+Mem_Add[14] => ~NO_FANOUT~
+Mem_Add[15] => ~NO_FANOUT~
+Mem_Data_In[0] => Data~25.DATAIN
 Mem_Data_In[0] => Data.DATAIN
-Mem_Data_In[1] => Data~30.DATAIN
+Mem_Data_In[1] => Data~24.DATAIN
 Mem_Data_In[1] => Data.DATAIN1
-Mem_Data_In[2] => Data~29.DATAIN
+Mem_Data_In[2] => Data~23.DATAIN
 Mem_Data_In[2] => Data.DATAIN2
-Mem_Data_In[3] => Data~28.DATAIN
+Mem_Data_In[3] => Data~22.DATAIN
 Mem_Data_In[3] => Data.DATAIN3
-Mem_Data_In[4] => Data~27.DATAIN
+Mem_Data_In[4] => Data~21.DATAIN
 Mem_Data_In[4] => Data.DATAIN4
-Mem_Data_In[5] => Data~26.DATAIN
+Mem_Data_In[5] => Data~20.DATAIN
 Mem_Data_In[5] => Data.DATAIN5
-Mem_Data_In[6] => Data~25.DATAIN
+Mem_Data_In[6] => Data~19.DATAIN
 Mem_Data_In[6] => Data.DATAIN6
-Mem_Data_In[7] => Data~24.DATAIN
+Mem_Data_In[7] => Data~18.DATAIN
 Mem_Data_In[7] => Data.DATAIN7
-Mem_Data_In[8] => Data~23.DATAIN
+Mem_Data_In[8] => Data~17.DATAIN
 Mem_Data_In[8] => Data.DATAIN8
-Mem_Data_In[9] => Data~22.DATAIN
+Mem_Data_In[9] => Data~16.DATAIN
 Mem_Data_In[9] => Data.DATAIN9
-Mem_Data_In[10] => Data~21.DATAIN
+Mem_Data_In[10] => Data~15.DATAIN
 Mem_Data_In[10] => Data.DATAIN10
-Mem_Data_In[11] => Data~20.DATAIN
+Mem_Data_In[11] => Data~14.DATAIN
 Mem_Data_In[11] => Data.DATAIN11
-Mem_Data_In[12] => Data~19.DATAIN
+Mem_Data_In[12] => Data~13.DATAIN
 Mem_Data_In[12] => Data.DATAIN12
-Mem_Data_In[13] => Data~18.DATAIN
+Mem_Data_In[13] => Data~12.DATAIN
 Mem_Data_In[13] => Data.DATAIN13
-Mem_Data_In[14] => Data~17.DATAIN
+Mem_Data_In[14] => Data~11.DATAIN
 Mem_Data_In[14] => Data.DATAIN14
-Mem_Data_In[15] => Data~16.DATAIN
+Mem_Data_In[15] => Data~10.DATAIN
 Mem_Data_In[15] => Data.DATAIN15
 PC_Add[0] => Data.RADDR
 PC_Add[1] => Data.RADDR1
@@ -2524,12 +2378,12 @@ PC_Add[6] => Data.RADDR6
 PC_Add[7] => Data.RADDR7
 PC_Add[8] => Data.RADDR8
 PC_Add[9] => Data.RADDR9
-PC_Add[10] => Data.RADDR10
-PC_Add[11] => Data.RADDR11
-PC_Add[12] => Data.RADDR12
-PC_Add[13] => Data.RADDR13
-PC_Add[14] => Data.RADDR14
-PC_Add[15] => Data.RADDR15
+PC_Add[10] => ~NO_FANOUT~
+PC_Add[11] => ~NO_FANOUT~
+PC_Add[12] => ~NO_FANOUT~
+PC_Add[13] => ~NO_FANOUT~
+PC_Add[14] => ~NO_FANOUT~
+PC_Add[15] => ~NO_FANOUT~
 Instruction_out[0] <= Data.DATAOUT
 Instruction_out[1] <= Data.DATAOUT1
 Instruction_out[2] <= Data.DATAOUT2
@@ -2546,7 +2400,7 @@ Instruction_out[12] <= Data.DATAOUT12
 Instruction_out[13] <= Data.DATAOUT13
 Instruction_out[14] <= Data.DATAOUT14
 Instruction_out[15] <= Data.DATAOUT15
-clock => Data~32.CLK
+clock => Data~26.CLK
 clock => Data~0.CLK
 clock => Data~1.CLK
 clock => Data~2.CLK
@@ -2573,12 +2427,6 @@ clock => Data~22.CLK
 clock => Data~23.CLK
 clock => Data~24.CLK
 clock => Data~25.CLK
-clock => Data~26.CLK
-clock => Data~27.CLK
-clock => Data~28.CLK
-clock => Data~29.CLK
-clock => Data~30.CLK
-clock => Data~31.CLK
 clock => Mem_Data_Out[0]~reg0.CLK
 clock => Mem_Data_Out[1]~reg0.CLK
 clock => Mem_Data_Out[2]~reg0.CLK
@@ -2596,7 +2444,7 @@ clock => Mem_Data_Out[13]~reg0.CLK
 clock => Mem_Data_Out[14]~reg0.CLK
 clock => Mem_Data_Out[15]~reg0.CLK
 clock => Data.CLK0
-Write_Enable => Data~32.DATAIN
+Write_Enable => Data~26.DATAIN
 Write_Enable => Data.WE
 Mem_Data_Out[0] <= Mem_Data_Out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Mem_Data_Out[1] <= Mem_Data_Out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -2616,7 +2464,7 @@ Mem_Data_Out[14] <= Mem_Data_Out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Mem_Data_Out[15] <= Mem_Data_Out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Mem_Add_Mux_Internal
+|IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_Add_Mux_Internal
 A0[0] => F.DATAB
 A0[1] => F.DATAB
 A0[2] => F.DATAB
@@ -2683,7 +2531,7 @@ F[14] <= F.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= F.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Mem_In_Mux_Internal
+|IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_In_Mux_Internal
 A0[0] => F.DATAB
 A0[1] => F.DATAB
 A0[2] => F.DATAB
@@ -2750,7 +2598,7 @@ F[14] <= F.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= F.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Mem_Add_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_Add_Mux
 A0[0] => F.DATAB
 A0[1] => F.DATAB
 A0[2] => F.DATAB
@@ -2817,7 +2665,7 @@ F[14] <= F.DB_MAX_OUTPUT_PORT_TYPE
 F[15] <= F.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|IITB_CPU:add_instance|Datapath:My_Datapath|Mux16_2x1:Mem_In_Mux
+|IITB_CPU|Datapath:My_Datapath|Mux16_2x1:Mem_In_Mux
 A0[0] => F.DATAB
 A0[1] => F.DATAB
 A0[2] => F.DATAB

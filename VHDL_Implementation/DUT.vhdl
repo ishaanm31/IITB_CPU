@@ -5,8 +5,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity DUT is
-    port(input_vector: in std_logic_vector(34 downto 0);
-       	output_vector: out std_logic_vector(31 downto 0));
+    port(input_vector: in std_logic_vector(34 downto 0));
 end entity;
 
 architecture DutWrap of DUT is
@@ -16,9 +15,7 @@ component IITB_CPU is
         clock,Reset: in std_logic;
         --Input for External Memory Update
         Mem_Ext_WR:in std_logic;
-        Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0);
-        --Outputing Program Counter(T1) And T3 for Testing purposes
-        PC_test,T3_test: out std_logic_vector(15 downto 0)
+        Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0)
     );
 end component;
 begin
@@ -31,8 +28,6 @@ begin
 					clock=>input_vector(0) ,Reset=>input_vector(1),
         --Input for External Memory Update
         Mem_Ext_WR=>input_vector(2),
-        Mem_Ext_Data_in=>input_vector(18 downto 3) ,Mem_Ext_Add=> input_vector(34 downto 19) ,
-        --Outputing Program Counter(T1) And T3 for Testing purposes
-        PC_test=>output_vector(31 downto 16),T3_test=>output_vector(15 downto 0)
+        Mem_Ext_Data_in=>input_vector(18 downto 3) ,Mem_Ext_Add=> input_vector(34 downto 19) 
 		  );
 end DutWrap;

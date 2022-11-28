@@ -13,7 +13,7 @@ Mem_Data_Out:out std_logic_vector(15 downto 0));
 end entity Memory;
 
 architecture struct of Memory is
-    type mem_word   is array (0 to 65535) of std_logic_vector(15 downto 0);
+    type mem_word   is array (0 to 1000) of std_logic_vector(15 downto 0);
     signal Data : mem_word;
 
 begin

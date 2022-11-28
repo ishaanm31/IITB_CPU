@@ -13,7 +13,7 @@ architecture Behave of Testbench is
   --  DUT.
   ----------------------------------------------------------------
   constant number_of_inputs  : integer := 35;  -- # input bits to your design.
-  constant number_of_outputs : integer := 32;  -- # output bits from your design.
+  constant number_of_outputs : integer := 0;  -- # output bits from your design.
   ----------------------------------------------------------------
   ----------------------------------------------------------------
 

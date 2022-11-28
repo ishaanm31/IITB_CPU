@@ -21,7 +21,7 @@ entity Datapath is
         loop_sel:in std_logic;
         --Outputs to FSM
         Z_flag, C_flag: out std_logic;
-        T1_out,T2_out ,T3_out: buffer std_logic_vector(15 downto 0);
+        T2_out : buffer std_logic_vector(15 downto 0);
         loop_count:buffer std_logic_vector(15 downto 0);
         --External Memory Updating Pins
         Mem_Ext_WR :in std_logic;
@@ -168,7 +168,7 @@ architecture Struct of Datapath is
     
     --Signals for temporary Registers.
     signal T3_in: std_logic_vector(15 downto 0);
-    signal T4_out: std_logic_vector(15 downto 0);
+    signal T1_out,T4_out,T3_out: std_logic_vector(15 downto 0);
     signal loop_in: std_logic_vector(15 downto 0);
     
     --Sig_Extended Signals

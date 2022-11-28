@@ -8,9 +8,7 @@ entity IITB_CPU is
         clock,Reset: in std_logic;
         --Input for External Memory Update
         Mem_Ext_WR:in std_logic;
-        Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0);
-        --Outputing Program Counter(T1) And T3 for Testing purposes
-        PC_test,T3_test: out std_logic_vector(15 downto 0)
+        Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0)
     );
 end entity;
 
@@ -58,7 +56,7 @@ architecture arch of IITB_CPU is
             loop_sel:in std_logic;
             --Inputs for the FSM
             Z_flag, C_flag: out std_logic;
-            T1_out,T2_out ,T3_out: buffer std_logic_vector(15 downto 0);
+            T2_out : buffer std_logic_vector(15 downto 0);
             loop_count:buffer std_logic_vector(15 downto 0);
             --External Memory Control
             Mem_Ext_WR:in std_logic;
@@ -87,7 +85,7 @@ architecture arch of IITB_CPU is
             signal  S_T2_out : std_logic_vector(15 downto 0);
             signal S_loop_count: std_logic_vector(15 downto 0);
     --Test Vector Output of the Machine
-        signal S_T1_out,S_T3_out,S_instruc:  std_logic_vector(15 downto 0);
+        signal S_T1_out,S_instruc:  std_logic_vector(15 downto 0);
         signal S_loop_sel:std_logic;
         
 begin
@@ -136,8 +134,6 @@ begin
         ALU_B_sel=> S_ALU_B_sel,
         T3_sel=>S_T3_sel , Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel,
         --Outputs for testing
-        T1_out=>PC_test,
-        T3_out=>T3_test,
         --Input pins for memory control
         Mem_Ext_WR=>Mem_Ext_WR,
         Mem_Ext_Data_in=> Mem_Ext_Data_in,

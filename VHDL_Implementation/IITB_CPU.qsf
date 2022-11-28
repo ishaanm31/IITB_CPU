@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M25SAE144C8G
-set_global_assignment -name TOP_LEVEL_ENTITY DUT
+set_global_assignment -name TOP_LEVEL_ENTITY IITB_CPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:04:06  NOVEMBER 27, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -58,8 +58,6 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
 set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
-set_global_assignment -name VHDL_FILE Testbench.vhdl
-set_global_assignment -name VHDL_FILE DUT.vhdl
 set_global_assignment -name VHDL_FILE Mux16_8x1.vhd
 set_global_assignment -name VHDL_FILE Shifter7.vhd
 set_global_assignment -name VHDL_FILE SE10.vhd
