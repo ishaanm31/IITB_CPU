@@ -31,7 +31,7 @@ architecture arch of IITB_CPU is
             T1_WR,T2_WR,T3_WR,T4_WR,loop_count_WR: out std_logic;
             ALU_A_sel: out std_logic_vector(2 downto 0);
             ALU_B_sel: out std_logic_vector(1 downto 0);
-            T3_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic;
+            T3_sel,T4_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic;
             loop_sel:out std_logic;
             instruc:in std_logic_vector(15 downto 0)
             );
@@ -52,7 +52,7 @@ architecture arch of IITB_CPU is
             T1_WR,T2_WR,T3_WR,T4_WR,loop_count_WR: in std_logic;        
             ALU_A_sel: in std_logic_vector(2 downto 0);
             ALU_B_sel: in std_logic_vector(1 downto 0);
-            T3_sel, Mem_Add_Sel, Mem_In_Sel: in std_logic;
+            T3_sel,T4_sel, Mem_Add_Sel, Mem_In_Sel: in std_logic;
             loop_sel:in std_logic;
             --Inputs for the FSM
             Z_flag, C_flag: out std_logic;
@@ -75,7 +75,7 @@ architecture arch of IITB_CPU is
             signal S_D3_sel :  std_logic_vector(2 downto 0);      
             signal S_ALU_A_sel:  std_logic_vector(2 downto 0);
             signal S_ALU_B_sel:  std_logic_vector(1 downto 0);
-            signal S_T3_sel, S_Mem_Add_Sel, S_Mem_In_Sel:  std_logic;
+            signal S_T3_sel,S_T4_sel, S_Mem_Add_Sel, S_Mem_In_Sel:  std_logic;
         --Write Enable Signals 
             signal S_Reg_file_EN, S_mem_WR_Internal:  std_logic;
             signal S_C_ctrl, S_Z_ctrl:  std_logic;
@@ -110,7 +110,7 @@ begin
         loop_count_WR=> S_loop_count_WR,
         ALU_A_sel=> S_ALU_A_sel,
         ALU_B_sel=> S_ALU_B_sel,
-        T3_sel=>S_T3_sel , Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel,
+        T3_sel=>S_T3_sel , T4_sel=>S_T4_sel, Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel,
         instruc=>S_instruc
     );
 
@@ -134,7 +134,7 @@ begin
         loop_count_WR=> S_loop_count_WR,
         ALU_A_sel=> S_ALU_A_sel,
         ALU_B_sel=> S_ALU_B_sel,
-        T3_sel=>S_T3_sel , Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel,
+        T3_sel=>S_T3_sel, T4_sel=>S_T4_sel, Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel,
         --Outputs for testing
         --Input pins for memory control
         Mem_Ext_WR=>Mem_Ext_WR,
