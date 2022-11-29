@@ -1,5 +1,5 @@
 Fitter report for IITB_CPU
-Tue Nov 29 00:34:32 2022
+Tue Nov 29 02:05:28 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Nov 29 00:34:32 2022       ;
+; Fitter Status                      ; Successful - Tue Nov 29 02:05:28 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; IITB_CPU                                    ;
@@ -147,7 +147,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -328,41 +328,41 @@ The pin-out file can be found in C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementatio
 +---------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name                ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; Mem_Ext_Add[0]      ; 38    ; 3        ; 3            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[0]      ; 57    ; 3        ; 21           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; Mem_Ext_Add[10]     ; 141   ; 8        ; 8            ; 21           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; Mem_Ext_Add[11]     ; 123   ; 8        ; 14           ; 21           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; Mem_Ext_Add[12]     ; 10    ; 1A       ; 25           ; 28           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; Mem_Ext_Add[13]     ; 90    ; 6        ; 60           ; 14           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; Mem_Ext_Add[14]     ; 91    ; 6        ; 60           ; 14           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; Mem_Ext_Add[15]     ; 54    ; 3        ; 19           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[1]      ; 76    ; 5        ; 60           ; 2            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[2]      ; 57    ; 3        ; 21           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[3]      ; 105   ; 6        ; 60           ; 31           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[4]      ; 134   ; 8        ; 10           ; 21           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[5]      ; 39    ; 3        ; 6            ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[6]      ; 85    ; 5        ; 60           ; 10           ; 22           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[7]      ; 25    ; 1B       ; 0            ; 15           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[8]      ; 98    ; 6        ; 60           ; 22           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Add[9]      ; 58    ; 3        ; 24           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[0]  ; 89    ; 6        ; 60           ; 13           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[10] ; 80    ; 5        ; 60           ; 8            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[11] ; 111   ; 7        ; 58           ; 36           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[12] ; 59    ; 3        ; 24           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[13] ; 79    ; 5        ; 60           ; 8            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[14] ; 66    ; 4        ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[15] ; 88    ; 6        ; 60           ; 13           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[1]  ; 86    ; 5        ; 60           ; 10           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[2]  ; 48    ; 3        ; 16           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[3]  ; 64    ; 4        ; 40           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[4]  ; 114   ; 7        ; 38           ; 36           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[5]  ; 47    ; 3        ; 14           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[6]  ; 78    ; 5        ; 60           ; 8            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[7]  ; 120   ; 8        ; 19           ; 21           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[8]  ; 69    ; 4        ; 53           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_Data_in[9]  ; 110   ; 7        ; 58           ; 36           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Mem_Ext_WR          ; 46    ; 3        ; 14           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; Reset               ; 102   ; 6        ; 60           ; 23           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; clock               ; 44    ; 3        ; 8            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[1]      ; 105   ; 6        ; 60           ; 31           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[2]      ; 134   ; 8        ; 10           ; 21           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[3]      ; 39    ; 3        ; 6            ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[4]      ; 85    ; 5        ; 60           ; 10           ; 22           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[5]      ; 25    ; 1B       ; 0            ; 15           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[6]      ; 98    ; 6        ; 60           ; 22           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[7]      ; 58    ; 3        ; 24           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[8]      ; 44    ; 3        ; 8            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Add[9]      ; 102   ; 6        ; 60           ; 23           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[0]  ; 86    ; 5        ; 60           ; 10           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[10] ; 59    ; 3        ; 24           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[11] ; 79    ; 5        ; 60           ; 8            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[12] ; 66    ; 4        ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[13] ; 88    ; 6        ; 60           ; 13           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[14] ; 38    ; 3        ; 3            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[15] ; 76    ; 5        ; 60           ; 2            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[1]  ; 64    ; 4        ; 40           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[2]  ; 114   ; 7        ; 38           ; 36           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[3]  ; 47    ; 3        ; 14           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[4]  ; 78    ; 5        ; 60           ; 8            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[5]  ; 120   ; 8        ; 19           ; 21           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[6]  ; 69    ; 4        ; 53           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[7]  ; 110   ; 7        ; 58           ; 36           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[8]  ; 80    ; 5        ; 60           ; 8            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_Data_in[9]  ; 111   ; 7        ; 58           ; 36           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Mem_Ext_WR          ; 48    ; 3        ; 16           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; Reset               ; 46    ; 3        ; 14           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; clock               ; 89    ; 6        ; 60           ; 13           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 +---------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -377,7 +377,7 @@ The pin-out file can be found in C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementatio
 ; 20       ; DIFFIO_RX_L12p, DIFFOUT_L12p, TDO, Low_Speed       ; Reserved as secondary function ; ~ALTERA_TDO~        ; Dual Purpose Pin ;
 ; 126      ; CONFIG_SEL, Low_Speed                              ; Reserved as secondary function ; ~ALTERA_CONFIG_SEL~ ; Dual Purpose Pin ;
 ; 129      ; nCONFIG, Low_Speed                                 ; Reserved as secondary function ; ~ALTERA_nCONFIG~    ; Dual Purpose Pin ;
-; 134      ; DIFFIO_RX_T42n, DIFFOUT_T42n, CRC_ERROR, Low_Speed ; Use as regular IO              ; Mem_Ext_Add[4]      ; Dual Purpose Pin ;
+; 134      ; DIFFIO_RX_T42n, DIFFOUT_T42n, CRC_ERROR, Low_Speed ; Use as regular IO              ; Mem_Ext_Add[2]      ; Dual Purpose Pin ;
 ; 136      ; DIFFIO_RX_T44p, DIFFOUT_T44p, nSTATUS, Low_Speed   ; Reserved as secondary function ; ~ALTERA_nSTATUS~    ; Dual Purpose Pin ;
 ; 138      ; DIFFIO_RX_T44n, DIFFOUT_T44n, CONF_DONE, Low_Speed ; Reserved as secondary function ; ~ALTERA_CONF_DONE~  ; Dual Purpose Pin ;
 +----------+----------------------------------------------------+--------------------------------+---------------------+------------------+
@@ -429,7 +429,7 @@ The pin-out file can be found in C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementatio
 ; 22       ; 30         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 23       ;            ; 1B       ; VCCIO1B                                        ; power  ;                       ; 2.5V      ; --         ;                 ; --       ; --           ;
 ; 24       ; 32         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
-; 25       ; 34         ; 1B       ; Mem_Ext_Add[7]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 25       ; 34         ; 1B       ; Mem_Ext_Add[5]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 26       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 27       ; 42         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 28       ; 44         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
@@ -442,17 +442,17 @@ The pin-out file can be found in C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementatio
 ; 35       ;            ; --       ; VCCA1                                          ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 36       ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 37       ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
-; 38       ; 76         ; 3        ; Mem_Ext_Add[0]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
-; 39       ; 78         ; 3        ; Mem_Ext_Add[5]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 38       ; 76         ; 3        ; Mem_Ext_Data_in[14]                            ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 39       ; 78         ; 3        ; Mem_Ext_Add[3]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 40       ;            ; 3        ; VCCIO3                                         ; power  ;                       ; 2.5V      ; --         ;                 ; --       ; --           ;
 ; 41       ; 80         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 42       ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
 ; 43       ; 82         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
-; 44       ; 84         ; 3        ; clock                                          ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 44       ; 84         ; 3        ; Mem_Ext_Add[8]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 45       ; 86         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
-; 46       ; 100        ; 3        ; Mem_Ext_WR                                     ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
-; 47       ; 102        ; 3        ; Mem_Ext_Data_in[5]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
-; 48       ; 105        ; 3        ; Mem_Ext_Data_in[2]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 46       ; 100        ; 3        ; Reset                                          ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 47       ; 102        ; 3        ; Mem_Ext_Data_in[3]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 48       ; 105        ; 3        ; Mem_Ext_WR                                     ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 49       ;            ; 3        ; VCCIO3                                         ; power  ;                       ; 2.5V      ; --         ;                 ; --       ; --           ;
 ; 50       ; 104        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 51       ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
@@ -461,39 +461,39 @@ The pin-out file can be found in C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementatio
 ; 54       ; 108        ; 3        ; Mem_Ext_Add[15]                                ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 55       ; 112        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 56       ; 114        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
-; 57       ; 116        ; 3        ; Mem_Ext_Add[2]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
-; 58       ; 118        ; 3        ; Mem_Ext_Add[9]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
-; 59       ; 120        ; 3        ; Mem_Ext_Data_in[12]                            ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 57       ; 116        ; 3        ; Mem_Ext_Add[0]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 58       ; 118        ; 3        ; Mem_Ext_Add[7]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 59       ; 120        ; 3        ; Mem_Ext_Data_in[10]                            ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 60       ; 122        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 61       ; 141        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; --       ; --           ;
 ; 62       ; 142        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 63       ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
-; 64       ; 148        ; 4        ; Mem_Ext_Data_in[3]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 64       ; 148        ; 4        ; Mem_Ext_Data_in[1]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 65       ; 150        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
-; 66       ; 152        ; 4        ; Mem_Ext_Data_in[14]                            ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 66       ; 152        ; 4        ; Mem_Ext_Data_in[12]                            ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 67       ;            ; 4        ; VCCIO4                                         ; power  ;                       ; 2.5V      ; --         ;                 ; --       ; --           ;
 ; 68       ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
-; 69       ; 176        ; 4        ; Mem_Ext_Data_in[8]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 69       ; 176        ; 4        ; Mem_Ext_Data_in[6]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 70       ; 178        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 71       ;            ; --       ; VCCA5                                          ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 72       ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 73       ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 74       ; 181        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 75       ; 180        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
-; 76       ; 183        ; 5        ; Mem_Ext_Add[1]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 76       ; 183        ; 5        ; Mem_Ext_Data_in[15]                            ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 77       ; 182        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
-; 78       ; 205        ; 5        ; Mem_Ext_Data_in[6]                             ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 79       ; 204        ; 5        ; Mem_Ext_Data_in[13]                            ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 80       ; 207        ; 5        ; Mem_Ext_Data_in[10]                            ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 78       ; 205        ; 5        ; Mem_Ext_Data_in[4]                             ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 79       ; 204        ; 5        ; Mem_Ext_Data_in[11]                            ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 80       ; 207        ; 5        ; Mem_Ext_Data_in[8]                             ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 81       ; 206        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 82       ;            ; 5        ; VCCIO5                                         ; power  ;                       ; 2.5V      ; --         ;                 ; --       ; --           ;
 ; 83       ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
 ; 84       ; 213        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
-; 85       ; 212        ; 5        ; Mem_Ext_Add[6]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 86       ; 215        ; 5        ; Mem_Ext_Data_in[1]                             ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 85       ; 212        ; 5        ; Mem_Ext_Add[4]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 86       ; 215        ; 5        ; Mem_Ext_Data_in[0]                             ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 87       ; 214        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
-; 88       ; 220        ; 6        ; Mem_Ext_Data_in[15]                            ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 89       ; 222        ; 6        ; Mem_Ext_Data_in[0]                             ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 88       ; 220        ; 6        ; Mem_Ext_Data_in[13]                            ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 89       ; 222        ; 6        ; clock                                          ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 90       ; 224        ; 6        ; Mem_Ext_Add[13]                                ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 91       ; 226        ; 6        ; Mem_Ext_Add[14]                                ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 92       ; 228        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
@@ -502,29 +502,29 @@ The pin-out file can be found in C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementatio
 ; 95       ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
 ; 96       ; 244        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 97       ; 245        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; --       ; --           ;
-; 98       ; 246        ; 6        ; Mem_Ext_Add[8]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 98       ; 246        ; 6        ; Mem_Ext_Add[6]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 99       ; 248        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 100      ; 249        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 101      ; 250        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
-; 102      ; 251        ; 6        ; Reset                                          ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 102      ; 251        ; 6        ; Mem_Ext_Add[9]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 103      ;            ; 6        ; VCCIO6                                         ; power  ;                       ; 2.5V      ; --         ;                 ; --       ; --           ;
 ; 104      ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
-; 105      ; 276        ; 6        ; Mem_Ext_Add[3]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 105      ; 276        ; 6        ; Mem_Ext_Add[1]                                 ; input  ; 2.5 V                 ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 106      ; 278        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Row I/O    ;                 ; no       ; On           ;
 ; 107      ;            ; --       ; VCCA3                                          ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 108      ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 109      ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
-; 110      ; 280        ; 7        ; Mem_Ext_Data_in[9]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
-; 111      ; 282        ; 7        ; Mem_Ext_Data_in[11]                            ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 110      ; 280        ; 7        ; Mem_Ext_Data_in[7]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 111      ; 282        ; 7        ; Mem_Ext_Data_in[9]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 112      ; 315        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; --       ; --           ;
 ; 113      ; 318        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
-; 114      ; 320        ; 7        ; Mem_Ext_Data_in[4]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 114      ; 320        ; 7        ; Mem_Ext_Data_in[2]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 115      ;            ; --       ; VCC_ONE                                        ; power  ;                       ; 3.0V/3.3V ; --         ;                 ; --       ; --           ;
 ; 116      ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
 ; 117      ;            ; 7        ; VCCIO7                                         ; power  ;                       ; 2.5V      ; --         ;                 ; --       ; --           ;
 ; 118      ; 340        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 119      ; 342        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
-; 120      ; 352        ; 8        ; Mem_Ext_Data_in[7]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 120      ; 352        ; 8        ; Mem_Ext_Data_in[5]                             ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 121      ; 354        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 122      ; 356        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 123      ; 359        ; 8        ; Mem_Ext_Add[11]                                ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
@@ -538,7 +538,7 @@ The pin-out file can be found in C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementatio
 ; 131      ; 366        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 132      ; 368        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 133      ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
-; 134      ; 370        ; 8        ; Mem_Ext_Add[4]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
+; 134      ; 370        ; 8        ; Mem_Ext_Add[2]                                 ; input  ; 2.5 V                 ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 135      ; 371        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;           ; Column I/O ;                 ; no       ; On           ;
 ; 136      ; 372        ; 8        ; ~ALTERA_nSTATUS~ / RESERVED_INPUT              ; input  ; 2.5 V Schmitt Trigger ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 137      ;            ;          ; GND                                            ; gnd    ;                       ;           ; --         ;                 ; --       ; --           ;
@@ -564,8 +564,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Mem_Ext_Add[13]     ; Incomplete set of assignments ;
 ; Mem_Ext_Add[14]     ; Incomplete set of assignments ;
 ; Mem_Ext_Add[15]     ; Incomplete set of assignments ;
-; Mem_Ext_WR          ; Incomplete set of assignments ;
+; Reset               ; Incomplete set of assignments ;
+; clock               ; Incomplete set of assignments ;
 ; Mem_Ext_Data_in[0]  ; Incomplete set of assignments ;
+; Mem_Ext_WR          ; Incomplete set of assignments ;
 ; Mem_Ext_Data_in[1]  ; Incomplete set of assignments ;
 ; Mem_Ext_Data_in[2]  ; Incomplete set of assignments ;
 ; Mem_Ext_Data_in[3]  ; Incomplete set of assignments ;
@@ -591,16 +593,16 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Mem_Ext_Add[7]      ; Incomplete set of assignments ;
 ; Mem_Ext_Add[8]      ; Incomplete set of assignments ;
 ; Mem_Ext_Add[9]      ; Incomplete set of assignments ;
-; clock               ; Incomplete set of assignments ;
-; Reset               ; Incomplete set of assignments ;
 ; Mem_Ext_Add[10]     ; Missing location assignment   ;
 ; Mem_Ext_Add[11]     ; Missing location assignment   ;
 ; Mem_Ext_Add[12]     ; Missing location assignment   ;
 ; Mem_Ext_Add[13]     ; Missing location assignment   ;
 ; Mem_Ext_Add[14]     ; Missing location assignment   ;
 ; Mem_Ext_Add[15]     ; Missing location assignment   ;
-; Mem_Ext_WR          ; Missing location assignment   ;
+; Reset               ; Missing location assignment   ;
+; clock               ; Missing location assignment   ;
 ; Mem_Ext_Data_in[0]  ; Missing location assignment   ;
+; Mem_Ext_WR          ; Missing location assignment   ;
 ; Mem_Ext_Data_in[1]  ; Missing location assignment   ;
 ; Mem_Ext_Data_in[2]  ; Missing location assignment   ;
 ; Mem_Ext_Data_in[3]  ; Missing location assignment   ;
@@ -626,8 +628,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Mem_Ext_Add[7]      ; Missing location assignment   ;
 ; Mem_Ext_Add[8]      ; Missing location assignment   ;
 ; Mem_Ext_Add[9]      ; Missing location assignment   ;
-; clock               ; Missing location assignment   ;
-; Reset               ; Missing location assignment   ;
 +---------------------+-------------------------------+
 
 
@@ -652,8 +652,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mem_Ext_Add[13]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Add[14]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Add[15]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; Mem_Ext_WR          ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Reset               ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; clock               ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Data_in[0]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Mem_Ext_WR          ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Data_in[1]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Data_in[2]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Data_in[3]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
@@ -679,8 +681,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mem_Ext_Add[7]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Add[8]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; Mem_Ext_Add[9]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; clock               ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; Reset               ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 +---------------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -695,8 +695,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mem_Ext_Add[13]     ;                   ;         ;
 ; Mem_Ext_Add[14]     ;                   ;         ;
 ; Mem_Ext_Add[15]     ;                   ;         ;
-; Mem_Ext_WR          ;                   ;         ;
+; Reset               ;                   ;         ;
+; clock               ;                   ;         ;
 ; Mem_Ext_Data_in[0]  ;                   ;         ;
+; Mem_Ext_WR          ;                   ;         ;
 ; Mem_Ext_Data_in[1]  ;                   ;         ;
 ; Mem_Ext_Data_in[2]  ;                   ;         ;
 ; Mem_Ext_Data_in[3]  ;                   ;         ;
@@ -722,8 +724,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mem_Ext_Add[7]      ;                   ;         ;
 ; Mem_Ext_Add[8]      ;                   ;         ;
 ; Mem_Ext_Add[9]      ;                   ;         ;
-; clock               ;                   ;         ;
-; Reset               ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
@@ -854,8 +854,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mem_Ext_Add[13]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Add[14]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Add[15]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Mem_Ext_WR          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Reset               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; clock               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Data_in[0]  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Mem_Ext_WR          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Data_in[1]  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Data_in[2]  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Data_in[3]  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -881,8 +883,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mem_Ext_Add[7]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Add[8]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Mem_Ext_Add[9]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; clock               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Reset               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +---------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -992,18 +992,18 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/output_files/IITB_CPU.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6531 megabytes
-    Info: Processing ended: Tue Nov 29 00:34:32 2022
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 6530 megabytes
+    Info: Processing ended: Tue Nov 29 02:05:29 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+

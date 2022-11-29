@@ -351,7 +351,7 @@ end case;
     T3_sel<=v_T3_sel;
     Mem_Add_Sel<=v_Mem_Add_Sel;
     Mem_In_Sel<=v_Mem_In_Sel;
-	 loop_sel<= v_loop_sel;
+	loop_sel<= v_loop_sel;
 
     end process;
 end behave;

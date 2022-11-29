@@ -6,7 +6,6 @@ entity Datapath is
 	port(
         --Inputs
         clock, reset:in std_logic;
-
         --Input from FSM, basically Control Variables
         alu_sel:in std_logic_vector(1 downto 0);    
         A1_sel : in std_logic_vector(1 downto 0);

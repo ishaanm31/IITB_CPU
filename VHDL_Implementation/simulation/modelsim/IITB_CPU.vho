@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/29/2022 00:34:56"
+-- DATE "11/29/2022 02:05:58"
 
 -- 
 -- Device: Altera 10M25SAE144C8G Package EQFP144
@@ -103,35 +103,35 @@ END IITB_CPU;
 -- Mem_Ext_Add[13]	=>  Location: PIN_90,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Mem_Ext_Add[14]	=>  Location: PIN_91,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Mem_Ext_Add[15]	=>  Location: PIN_54,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_WR	=>  Location: PIN_46,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[0]	=>  Location: PIN_89,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[1]	=>  Location: PIN_86,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[2]	=>  Location: PIN_48,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[3]	=>  Location: PIN_64,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[4]	=>  Location: PIN_114,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[5]	=>  Location: PIN_47,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[6]	=>  Location: PIN_78,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[7]	=>  Location: PIN_120,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[8]	=>  Location: PIN_69,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[9]	=>  Location: PIN_110,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[10]	=>  Location: PIN_80,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[11]	=>  Location: PIN_111,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[12]	=>  Location: PIN_59,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[13]	=>  Location: PIN_79,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[14]	=>  Location: PIN_66,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Data_in[15]	=>  Location: PIN_88,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[0]	=>  Location: PIN_38,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[1]	=>  Location: PIN_76,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[2]	=>  Location: PIN_57,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[3]	=>  Location: PIN_105,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[4]	=>  Location: PIN_134,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[5]	=>  Location: PIN_39,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[6]	=>  Location: PIN_85,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[7]	=>  Location: PIN_25,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[8]	=>  Location: PIN_98,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Mem_Ext_Add[9]	=>  Location: PIN_58,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- clock	=>  Location: PIN_44,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Reset	=>  Location: PIN_102,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Reset	=>  Location: PIN_46,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clock	=>  Location: PIN_89,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[0]	=>  Location: PIN_86,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_WR	=>  Location: PIN_48,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[1]	=>  Location: PIN_64,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[2]	=>  Location: PIN_114,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[3]	=>  Location: PIN_47,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[4]	=>  Location: PIN_78,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[5]	=>  Location: PIN_120,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[6]	=>  Location: PIN_69,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[7]	=>  Location: PIN_110,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[8]	=>  Location: PIN_80,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[9]	=>  Location: PIN_111,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[10]	=>  Location: PIN_59,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[11]	=>  Location: PIN_79,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[12]	=>  Location: PIN_66,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[13]	=>  Location: PIN_88,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[14]	=>  Location: PIN_38,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Data_in[15]	=>  Location: PIN_76,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[0]	=>  Location: PIN_57,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[1]	=>  Location: PIN_105,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[2]	=>  Location: PIN_134,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[3]	=>  Location: PIN_39,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[4]	=>  Location: PIN_85,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[5]	=>  Location: PIN_25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[6]	=>  Location: PIN_98,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[7]	=>  Location: PIN_58,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[8]	=>  Location: PIN_44,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Mem_Ext_Add[9]	=>  Location: PIN_102,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF IITB_CPU IS
@@ -157,8 +157,10 @@ SIGNAL \Mem_Ext_Add[12]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Add[13]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Add[14]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Add[15]~input_o\ : std_logic;
-SIGNAL \Mem_Ext_WR~input_o\ : std_logic;
+SIGNAL \Reset~input_o\ : std_logic;
+SIGNAL \clock~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Data_in[0]~input_o\ : std_logic;
+SIGNAL \Mem_Ext_WR~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Data_in[1]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Data_in[2]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Data_in[3]~input_o\ : std_logic;
@@ -184,8 +186,6 @@ SIGNAL \Mem_Ext_Add[6]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Add[7]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Add[8]~input_o\ : std_logic;
 SIGNAL \Mem_Ext_Add[9]~input_o\ : std_logic;
-SIGNAL \clock~input_o\ : std_logic;
-SIGNAL \Reset~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_UNVM~~busy\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~~eoc\ : std_logic;
@@ -304,7 +304,7 @@ PORT MAP (
 	o => \Mem_Ext_Add[15]~input_o\);
 
 -- Location: IOIBUF_X14_Y0_N8
-\Mem_Ext_WR~input\ : fiftyfivenm_io_ibuf
+\Reset~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -312,322 +312,10 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_Mem_Ext_WR,
-	o => \Mem_Ext_WR~input_o\);
+	i => ww_Reset,
+	o => \Reset~input_o\);
 
 -- Location: IOIBUF_X60_Y13_N15
-\Mem_Ext_Data_in[0]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(0),
-	o => \Mem_Ext_Data_in[0]~input_o\);
-
--- Location: IOIBUF_X60_Y10_N1
-\Mem_Ext_Data_in[1]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(1),
-	o => \Mem_Ext_Data_in[1]~input_o\);
-
--- Location: IOIBUF_X16_Y0_N29
-\Mem_Ext_Data_in[2]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(2),
-	o => \Mem_Ext_Data_in[2]~input_o\);
-
--- Location: IOIBUF_X40_Y0_N29
-\Mem_Ext_Data_in[3]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(3),
-	o => \Mem_Ext_Data_in[3]~input_o\);
-
--- Location: IOIBUF_X38_Y36_N15
-\Mem_Ext_Data_in[4]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(4),
-	o => \Mem_Ext_Data_in[4]~input_o\);
-
--- Location: IOIBUF_X14_Y0_N1
-\Mem_Ext_Data_in[5]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(5),
-	o => \Mem_Ext_Data_in[5]~input_o\);
-
--- Location: IOIBUF_X60_Y8_N8
-\Mem_Ext_Data_in[6]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(6),
-	o => \Mem_Ext_Data_in[6]~input_o\);
-
--- Location: IOIBUF_X19_Y21_N22
-\Mem_Ext_Data_in[7]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(7),
-	o => \Mem_Ext_Data_in[7]~input_o\);
-
--- Location: IOIBUF_X53_Y0_N8
-\Mem_Ext_Data_in[8]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(8),
-	o => \Mem_Ext_Data_in[8]~input_o\);
-
--- Location: IOIBUF_X58_Y36_N1
-\Mem_Ext_Data_in[9]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(9),
-	o => \Mem_Ext_Data_in[9]~input_o\);
-
--- Location: IOIBUF_X60_Y8_N1
-\Mem_Ext_Data_in[10]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(10),
-	o => \Mem_Ext_Data_in[10]~input_o\);
-
--- Location: IOIBUF_X58_Y36_N8
-\Mem_Ext_Data_in[11]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(11),
-	o => \Mem_Ext_Data_in[11]~input_o\);
-
--- Location: IOIBUF_X24_Y0_N8
-\Mem_Ext_Data_in[12]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(12),
-	o => \Mem_Ext_Data_in[12]~input_o\);
-
--- Location: IOIBUF_X60_Y8_N22
-\Mem_Ext_Data_in[13]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(13),
-	o => \Mem_Ext_Data_in[13]~input_o\);
-
--- Location: IOIBUF_X40_Y0_N1
-\Mem_Ext_Data_in[14]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(14),
-	o => \Mem_Ext_Data_in[14]~input_o\);
-
--- Location: IOIBUF_X60_Y13_N22
-\Mem_Ext_Data_in[15]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Data_in(15),
-	o => \Mem_Ext_Data_in[15]~input_o\);
-
--- Location: IOIBUF_X3_Y0_N1
-\Mem_Ext_Add[0]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(0),
-	o => \Mem_Ext_Add[0]~input_o\);
-
--- Location: IOIBUF_X60_Y2_N1
-\Mem_Ext_Add[1]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(1),
-	o => \Mem_Ext_Add[1]~input_o\);
-
--- Location: IOIBUF_X21_Y0_N1
-\Mem_Ext_Add[2]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(2),
-	o => \Mem_Ext_Add[2]~input_o\);
-
--- Location: IOIBUF_X60_Y31_N22
-\Mem_Ext_Add[3]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(3),
-	o => \Mem_Ext_Add[3]~input_o\);
-
--- Location: IOIBUF_X10_Y21_N1
-\Mem_Ext_Add[4]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(4),
-	o => \Mem_Ext_Add[4]~input_o\);
-
--- Location: IOIBUF_X6_Y0_N29
-\Mem_Ext_Add[5]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(5),
-	o => \Mem_Ext_Add[5]~input_o\);
-
--- Location: IOIBUF_X60_Y10_N23
-\Mem_Ext_Add[6]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(6),
-	o => \Mem_Ext_Add[6]~input_o\);
-
--- Location: IOIBUF_X0_Y15_N22
-\Mem_Ext_Add[7]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(7),
-	o => \Mem_Ext_Add[7]~input_o\);
-
--- Location: IOIBUF_X60_Y22_N15
-\Mem_Ext_Add[8]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(8),
-	o => \Mem_Ext_Add[8]~input_o\);
-
--- Location: IOIBUF_X24_Y0_N29
-\Mem_Ext_Add[9]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_Mem_Ext_Add(9),
-	o => \Mem_Ext_Add[9]~input_o\);
-
--- Location: IOIBUF_X8_Y0_N15
 \clock~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -639,8 +327,8 @@ PORT MAP (
 	i => ww_clock,
 	o => \clock~input_o\);
 
--- Location: IOIBUF_X60_Y23_N1
-\Reset~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X60_Y10_N1
+\Mem_Ext_Data_in[0]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -648,8 +336,320 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_Reset,
-	o => \Reset~input_o\);
+	i => ww_Mem_Ext_Data_in(0),
+	o => \Mem_Ext_Data_in[0]~input_o\);
+
+-- Location: IOIBUF_X16_Y0_N29
+\Mem_Ext_WR~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_WR,
+	o => \Mem_Ext_WR~input_o\);
+
+-- Location: IOIBUF_X40_Y0_N29
+\Mem_Ext_Data_in[1]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(1),
+	o => \Mem_Ext_Data_in[1]~input_o\);
+
+-- Location: IOIBUF_X38_Y36_N15
+\Mem_Ext_Data_in[2]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(2),
+	o => \Mem_Ext_Data_in[2]~input_o\);
+
+-- Location: IOIBUF_X14_Y0_N1
+\Mem_Ext_Data_in[3]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(3),
+	o => \Mem_Ext_Data_in[3]~input_o\);
+
+-- Location: IOIBUF_X60_Y8_N8
+\Mem_Ext_Data_in[4]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(4),
+	o => \Mem_Ext_Data_in[4]~input_o\);
+
+-- Location: IOIBUF_X19_Y21_N22
+\Mem_Ext_Data_in[5]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(5),
+	o => \Mem_Ext_Data_in[5]~input_o\);
+
+-- Location: IOIBUF_X53_Y0_N8
+\Mem_Ext_Data_in[6]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(6),
+	o => \Mem_Ext_Data_in[6]~input_o\);
+
+-- Location: IOIBUF_X58_Y36_N1
+\Mem_Ext_Data_in[7]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(7),
+	o => \Mem_Ext_Data_in[7]~input_o\);
+
+-- Location: IOIBUF_X60_Y8_N1
+\Mem_Ext_Data_in[8]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(8),
+	o => \Mem_Ext_Data_in[8]~input_o\);
+
+-- Location: IOIBUF_X58_Y36_N8
+\Mem_Ext_Data_in[9]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(9),
+	o => \Mem_Ext_Data_in[9]~input_o\);
+
+-- Location: IOIBUF_X24_Y0_N8
+\Mem_Ext_Data_in[10]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(10),
+	o => \Mem_Ext_Data_in[10]~input_o\);
+
+-- Location: IOIBUF_X60_Y8_N22
+\Mem_Ext_Data_in[11]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(11),
+	o => \Mem_Ext_Data_in[11]~input_o\);
+
+-- Location: IOIBUF_X40_Y0_N1
+\Mem_Ext_Data_in[12]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(12),
+	o => \Mem_Ext_Data_in[12]~input_o\);
+
+-- Location: IOIBUF_X60_Y13_N22
+\Mem_Ext_Data_in[13]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(13),
+	o => \Mem_Ext_Data_in[13]~input_o\);
+
+-- Location: IOIBUF_X3_Y0_N1
+\Mem_Ext_Data_in[14]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(14),
+	o => \Mem_Ext_Data_in[14]~input_o\);
+
+-- Location: IOIBUF_X60_Y2_N1
+\Mem_Ext_Data_in[15]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Data_in(15),
+	o => \Mem_Ext_Data_in[15]~input_o\);
+
+-- Location: IOIBUF_X21_Y0_N1
+\Mem_Ext_Add[0]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(0),
+	o => \Mem_Ext_Add[0]~input_o\);
+
+-- Location: IOIBUF_X60_Y31_N22
+\Mem_Ext_Add[1]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(1),
+	o => \Mem_Ext_Add[1]~input_o\);
+
+-- Location: IOIBUF_X10_Y21_N1
+\Mem_Ext_Add[2]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(2),
+	o => \Mem_Ext_Add[2]~input_o\);
+
+-- Location: IOIBUF_X6_Y0_N29
+\Mem_Ext_Add[3]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(3),
+	o => \Mem_Ext_Add[3]~input_o\);
+
+-- Location: IOIBUF_X60_Y10_N23
+\Mem_Ext_Add[4]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(4),
+	o => \Mem_Ext_Add[4]~input_o\);
+
+-- Location: IOIBUF_X0_Y15_N22
+\Mem_Ext_Add[5]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(5),
+	o => \Mem_Ext_Add[5]~input_o\);
+
+-- Location: IOIBUF_X60_Y22_N15
+\Mem_Ext_Add[6]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(6),
+	o => \Mem_Ext_Add[6]~input_o\);
+
+-- Location: IOIBUF_X24_Y0_N29
+\Mem_Ext_Add[7]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(7),
+	o => \Mem_Ext_Add[7]~input_o\);
+
+-- Location: IOIBUF_X8_Y0_N15
+\Mem_Ext_Add[8]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(8),
+	o => \Mem_Ext_Add[8]~input_o\);
+
+-- Location: IOIBUF_X60_Y23_N1
+\Mem_Ext_Add[9]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Mem_Ext_Add(9),
+	o => \Mem_Ext_Add[9]~input_o\);
 
 -- Location: UNVM_X0_Y22_N40
 \~QUARTUS_CREATED_UNVM~\ : fiftyfivenm_unvm
