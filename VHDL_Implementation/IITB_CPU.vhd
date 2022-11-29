@@ -61,7 +61,9 @@ architecture arch of IITB_CPU is
             --External Memory Control
             Mem_Ext_WR:in std_logic;
             Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0);
-            instruc:out std_logic_vector(15 downto 0)
+            instruc:out std_logic_vector(15 downto 0);
+            --for testing PC
+            Test_PC, Test_M, R1_Test:out std_logic_vector(15 downto 0)
             );
     end component;
 --Initiating Signals to connect FSM to Datapath and mapping Input outputs of the whole machine
@@ -85,7 +87,7 @@ architecture arch of IITB_CPU is
             signal  S_T2_out : std_logic_vector(15 downto 0);
             signal S_loop_count: std_logic_vector(15 downto 0);
     --Test Vector Output of the Machine
-        signal S_T1_out,S_instruc:  std_logic_vector(15 downto 0);
+        signal S_T1_out,S_instruc,S_Test_M,S_R1 :  std_logic_vector(15 downto 0);
         signal S_loop_sel:std_logic;
         
 begin
@@ -139,6 +141,9 @@ begin
         Mem_Ext_Data_in=> Mem_Ext_Data_in,
         Mem_Ext_Add =>Mem_Ext_Add,
         loop_sel=>S_loop_sel,
-        instruc=>S_instruc
+        instruc=>S_instruc,
+		Test_PC=>S_T1_out,
+        Test_M=>S_Test_M ,
+        R1_Test=>S_R1
     );
 end architecture arch;

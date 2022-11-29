@@ -25,7 +25,9 @@ entity Datapath is
         --External Memory Updating Pins
         Mem_Ext_WR :in std_logic;
         Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0);
-        instruc:out std_logic_vector(15 downto 0)
+        instruc:out std_logic_vector(15 downto 0);
+        --for testing PC and one register of Memory
+        Test_PC,Test_M, R1_Test:out std_logic_vector(15 downto 0)
 		);
 end Datapath;
 
@@ -73,7 +75,8 @@ architecture Struct of Datapath is
               D3: in std_logic_vector(15 downto 0);
               clock,Write_Enable:in std_logic;
               PC:out std_logic_vector(15 downto 0);
-              D1, D2: out std_logic_vector(15 downto 0));
+              D1, D2: out std_logic_vector(15 downto 0);
+              R1_Test:out std_logic_vector(15 downto 0));
         end component;
     
     --6. Signed Extension 7(SE7)
@@ -108,7 +111,7 @@ architecture Struct of Datapath is
         port (Mem_Add: in std_logic_vector(15 downto 0);
         Mem_Data_In:in std_logic_vector(15 downto 0);
         PC_Add:in std_logic_vector(15 downto 0);
-        Instruction_out:out std_logic_vector(15 downto 0);
+        Instruction_out,Test_Mem:out std_logic_vector(15 downto 0);
         clock,Write_Enable:in std_logic;
         Mem_Data_Out:out std_logic_vector(15 downto 0));
     end component;
@@ -180,6 +183,7 @@ architecture Struct of Datapath is
     signal mem_WR: std_logic;
     
 begin
+	Test_PC<=T1_out;
 -- Temporary registers and Loop Count register Instantiate
     T1: Register_16bit port map(DataIn => D1, clock => clock, Write_Enable => T1_WR, DataOut => T1_out);
     T2: Register_16bit port map(DataIn => mem_out, clock => clock, Write_Enable => T2_WR, DataOut => T2_out);
@@ -192,7 +196,7 @@ begin
     T3_Mux: MUX16_2x1 port map(A0=> D1,A1=> alu_c, sel =>T3_sel, F=>T3_in);
 
 --Register File Instantiate
-    Reg_File: Register_file port map (A1, A2, A3, D3, clock, Reg_file_EN, PC, D1, D2);
+    Reg_File: Register_file port map (A1, A2, A3, D3, clock, Reg_file_EN, PC, D1, D2,R1_Test);
 --A2 needs no Mux, it has only one input
     A2 <= T2_out(8 downto 6);
 
@@ -226,7 +230,7 @@ begin
     carry_dff: dff_en port map(clk => clock, reset => reset, en => C_ctrl, d => carry_dff_inp, q => C_flag);
     zero_dff: dff_en port map(clk => clock, reset => reset, en => Z_ctrl, d => zero_dff_inp, q => Z_flag);
     
-    mem : Memory port map(Mem_Add => mem_add, Mem_Data_In => mem_in,Write_Enable => mem_WR,PC_Add=>PC,Instruction_out=>Instruc,clock => clock, Mem_Data_Out => mem_out);
+    mem : Memory port map(Mem_Add => mem_add, Mem_Data_In => mem_in,Write_Enable => mem_WR,Test_Mem=>Test_M ,PC_Add=>PC,Instruction_out=>Instruc,clock => clock, Mem_Data_Out => mem_out);
     Mem_Add_Mux_Internal : Mux16_2x1 port map(A0 => D1, A1 =>T3_out, sel =>Mem_Add_Sel,F =>mem_add_internal);
     Mem_In_Mux_Internal : Mux16_2x1 port map(A0 =>T4_out, A1 => D1, sel =>Mem_In_Sel,F =>mem_in_internal);
 

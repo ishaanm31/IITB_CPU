@@ -7,15 +7,18 @@ port (A1, A2, A3: in std_logic_vector(2 downto 0 );
 D3:in std_logic_vector(15 downto 0);
 PC:out std_logic_vector(15 downto 0):=(others=>'0');
 clock,Write_Enable:in std_logic;
-D1, D2:out std_logic_vector(15 downto 0));
+D1, D2:out std_logic_vector(15 downto 0);
+R1_Test:out std_logic_vector(15 downto 0)
+);
 end entity Register_file;
 
 architecture struct of Register_File is
     type mem_word   is array (0 to 7) of std_logic_vector(15 downto 0);
-    signal Data : mem_word :=(others=>(others=>'0'));
+    signal Data : mem_word :=((others=>'0'),"1010101001010101",others=>(others=>'0'));
 
 begin
----Instruction
+---test register
+R1_Test<=Data(1);
 
 -----------------------------------------ARRAY of Registers--------------------------------------
 write_process : process(A3,D3,Write_Enable,Data,clock) 

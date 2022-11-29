@@ -6,7 +6,7 @@ entity Memory is
 port (Mem_Add: in std_logic_vector(15 downto 0 );
 Mem_Data_In:in std_logic_vector(15 downto 0);
 PC_Add:in std_logic_vector(15 downto 0);
-Instruction_out:out std_logic_vector(15 downto 0);
+Instruction_out,Test_Mem:out std_logic_vector(15 downto 0);
 clock,Write_Enable:in std_logic;
 Mem_Data_Out:out std_logic_vector(15 downto 0));
 
@@ -14,13 +14,12 @@ end entity Memory;
 
 architecture struct of Memory is
     type mem_word   is array (0 to 1000) of std_logic_vector(15 downto 0);
-    signal Data : mem_word:= ("0011000000000000","0011001000000001","0011010000000001",
-										"0011011000000011","0011100000000100","0011101000000101",
-										"0011110000000110",others => "0011110000000110");
+    signal Data : mem_word:= ("0011001000000001",others => "0000000000000000");
 
 begin
 --Instruction Outputs directly given
   Instruction_out(15 downto 0) <= Data(To_integer(unsigned(PC_Add)));
+  Test_Mem(15 downto 0) <= Data(128);
 -----------------------------------------Write in Memory--------------------------------------
 write_process : process(Mem_Add, Mem_Data_In, Write_Enable, clock, Data) 
 
