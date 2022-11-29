@@ -142,7 +142,7 @@ begin
         Mem_Ext_Add =>Mem_Ext_Add,
         loop_sel=>S_loop_sel,
         instruc=>S_instruc,
-		Test_PC=>S_T1_out,
+		  Test_PC=>S_T1_out,
         Test_M=>S_Test_M ,
         R1_Test=>S_R1
     );

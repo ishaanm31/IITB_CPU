@@ -1,5 +1,5 @@
 Analysis & Elaboration report for IITB_CPU
-Tue Nov 29 17:50:31 2022
+Tue Nov 29 19:46:13 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -21,7 +21,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  13. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_4x1:A1_Mux"
  14. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_2x1:Loop_Mux"
  15. Port Connectivity Checks: "Datapath:My_Datapath"
- 16. Analysis & Elaboration Messages
+ 16. Port Connectivity Checks: "FSM:My_FSM"
+ 17. Analysis & Elaboration Messages
 
 
 
@@ -48,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Nov 29 17:50:31 2022       ;
+; Analysis & Elaboration Status      ; Successful - Tue Nov 29 19:46:13 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; IITB_CPU                                    ;
@@ -72,8 +73,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -329,15 +330,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath"                                                                  ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; test_pc ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; test_m  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; r1_test ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:My_Datapath"                                                                                                                           ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; test_pc ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; test_m  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; r1_test ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; t4_sel  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM:My_FSM"                                                                                                ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; t4_sel ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -346,104 +357,92 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 29 17:50:20 2022
+    Info: Processing started: Tue Nov 29 19:46:05 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mux16_8x1.vhd
-    Info (12022): Found design unit 1: Mux16_8x1-Dataflow File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_8x1.vhd Line: 17
-    Info (12023): Found entity 1: Mux16_8x1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_8x1.vhd Line: 5
+    Info (12022): Found design unit 1: Mux16_8x1-Dataflow File: D:/github/IITB_CPU/VHDL_Implementation/Mux16_8x1.vhd Line: 17
+    Info (12023): Found entity 1: Mux16_8x1 File: D:/github/IITB_CPU/VHDL_Implementation/Mux16_8x1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file shifter7.vhd
-    Info (12022): Found design unit 1: Shifter7-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Shifter7.vhd Line: 10
-    Info (12023): Found entity 1: Shifter7 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Shifter7.vhd Line: 5
+    Info (12022): Found design unit 1: Shifter7-struct File: D:/github/IITB_CPU/VHDL_Implementation/Shifter7.vhd Line: 10
+    Info (12023): Found entity 1: Shifter7 File: D:/github/IITB_CPU/VHDL_Implementation/Shifter7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file se10.vhd
-    Info (12022): Found design unit 1: SE10-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/SE10.vhd Line: 9
-    Info (12023): Found entity 1: SE10 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/SE10.vhd Line: 4
+    Info (12022): Found design unit 1: SE10-struct File: D:/github/IITB_CPU/VHDL_Implementation/SE10.vhd Line: 9
+    Info (12023): Found entity 1: SE10 File: D:/github/IITB_CPU/VHDL_Implementation/SE10.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file se7.vhd
-    Info (12022): Found design unit 1: SE7-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/SE7.vhd Line: 10
-    Info (12023): Found entity 1: SE7 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/SE7.vhd Line: 5
+    Info (12022): Found design unit 1: SE7-struct File: D:/github/IITB_CPU/VHDL_Implementation/SE7.vhd Line: 10
+    Info (12023): Found entity 1: SE7 File: D:/github/IITB_CPU/VHDL_Implementation/SE7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
-    Info (12022): Found design unit 1: Register_File-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 15
-    Info (12023): Found entity 1: Register_file File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 5
+    Info (12022): Found design unit 1: Register_File-struct File: D:/github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 15
+    Info (12023): Found entity 1: Register_file File: D:/github/IITB_CPU/VHDL_Implementation/Register_file.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_16bit.vhd
-    Info (12022): Found design unit 1: Register_16bit-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_16bit.vhd Line: 11
-    Info (12023): Found entity 1: Register_16bit File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_16bit.vhd Line: 5
+    Info (12022): Found design unit 1: Register_16bit-struct File: D:/github/IITB_CPU/VHDL_Implementation/Register_16bit.vhd Line: 11
+    Info (12023): Found entity 1: Register_16bit File: D:/github/IITB_CPU/VHDL_Implementation/Register_16bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_3bit.vhd
-    Info (12022): Found design unit 1: Register_3bit-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_3bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_3bit File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Register_3bit.vhd Line: 4
+    Info (12022): Found design unit 1: Register_3bit-struct File: D:/github/IITB_CPU/VHDL_Implementation/Register_3bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_3bit File: D:/github/IITB_CPU/VHDL_Implementation/Register_3bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux16_4x1.vhd
-    Info (12022): Found design unit 1: Mux16_4x1-Dataflow File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_4x1.vhd Line: 12
-    Info (12023): Found entity 1: Mux16_4x1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_4x1.vhd Line: 4
+    Info (12022): Found design unit 1: Mux16_4x1-Dataflow File: D:/github/IITB_CPU/VHDL_Implementation/Mux16_4x1.vhd Line: 12
+    Info (12023): Found entity 1: Mux16_4x1 File: D:/github/IITB_CPU/VHDL_Implementation/Mux16_4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux16_2x1.vhd
-    Info (12022): Found design unit 1: Mux16_2x1-Dataflow File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_2x1.vhd Line: 10
-    Info (12023): Found entity 1: Mux16_2x1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux16_2x1.vhd Line: 4
+    Info (12022): Found design unit 1: Mux16_2x1-Dataflow File: D:/github/IITB_CPU/VHDL_Implementation/Mux16_2x1.vhd Line: 10
+    Info (12023): Found entity 1: Mux16_2x1 File: D:/github/IITB_CPU/VHDL_Implementation/Mux16_2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux3_8x1.vhd
-    Info (12022): Found design unit 1: Mux3_8x1-Dataflow File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux3_8x1.vhd Line: 16
-    Info (12023): Found entity 1: Mux3_8x1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux3_8x1.vhd Line: 4
+    Info (12022): Found design unit 1: Mux3_8x1-Dataflow File: D:/github/IITB_CPU/VHDL_Implementation/Mux3_8x1.vhd Line: 16
+    Info (12023): Found entity 1: Mux3_8x1 File: D:/github/IITB_CPU/VHDL_Implementation/Mux3_8x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux3_2x1.vhd
-    Info (12022): Found design unit 1: Mux3_4x1-Dataflow1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux3_2x1.vhd Line: 12
-    Info (12023): Found entity 1: Mux3_4x1 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Mux3_2x1.vhd Line: 4
+    Info (12022): Found design unit 1: Mux3_4x1-Dataflow1 File: D:/github/IITB_CPU/VHDL_Implementation/Mux3_2x1.vhd Line: 12
+    Info (12023): Found entity 1: Mux3_4x1 File: D:/github/IITB_CPU/VHDL_Implementation/Mux3_2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
-    Info (12022): Found design unit 1: Memory-struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 15
-    Info (12023): Found entity 1: Memory File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 5
+    Info (12022): Found design unit 1: Memory-struct File: D:/github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 15
+    Info (12023): Found entity 1: Memory File: D:/github/IITB_CPU/VHDL_Implementation/Memory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dff_en.vhd
-    Info (12022): Found design unit 1: dff_en-behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/dff_en.vhd Line: 13
-    Info (12023): Found entity 1: dff_en File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/dff_en.vhd Line: 3
+    Info (12022): Found design unit 1: dff_en-behave File: D:/github/IITB_CPU/VHDL_Implementation/dff_en.vhd Line: 13
+    Info (12023): Found entity 1: dff_en File: D:/github/IITB_CPU/VHDL_Implementation/dff_en.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 15
-    Info (12023): Found entity 1: ALU File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 5
+    Info (12022): Found design unit 1: ALU-behave File: D:/github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 15
+    Info (12023): Found entity 1: ALU File: D:/github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhdl
-    Info (12022): Found design unit 1: Datapath-Struct File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 34
-    Info (12023): Found entity 1: Datapath File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 5
+    Info (12022): Found design unit 1: Datapath-Struct File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 34
+    Info (12023): Found entity 1: Datapath File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
-    Info (12022): Found design unit 1: FSM-behave File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 25
-    Info (12023): Found entity 1: FSM File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 5
+    Info (12022): Found design unit 1: FSM-behave File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 25
+    Info (12023): Found entity 1: FSM File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file iitb_cpu.vhd
-    Info (12022): Found design unit 1: IITB_CPU-arch File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 15
-    Info (12023): Found entity 1: IITB_CPU File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 5
+    Info (12022): Found design unit 1: IITB_CPU-arch File: D:/github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 15
+    Info (12023): Found entity 1: IITB_CPU File: D:/github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 5
 Info (12127): Elaborating entity "IITB_CPU" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at IITB_CPU.vhd(90): object "S_T1_out" assigned a value but never read File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 90
-Warning (10036): Verilog HDL or VHDL warning at IITB_CPU.vhd(90): object "S_Test_M" assigned a value but never read File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 90
-Warning (10036): Verilog HDL or VHDL warning at IITB_CPU.vhd(90): object "S_R1" assigned a value but never read File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 90
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:My_FSM" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at FSM.vhd(64): signal "instruc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 64
-Warning (10492): VHDL Process Statement warning at FSM.vhd(65): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 65
-Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "C_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at FSM.vhd(69): signal "State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at FSM.vhd(223): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 223
-Warning (10492): VHDL Process Statement warning at FSM.vhd(257): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 257
-Warning (10492): VHDL Process Statement warning at FSM.vhd(262): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 262
-Warning (10492): VHDL Process Statement warning at FSM.vhd(315): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 315
-Warning (10492): VHDL Process Statement warning at FSM.vhd(320): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 320
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:My_Datapath" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 118
-Info (12128): Elaborating entity "Register_16bit" for hierarchy "Datapath:My_Datapath|Register_16bit:T1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 188
-Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 194
-Info (12128): Elaborating entity "Register_file" for hierarchy "Datapath:My_Datapath|Register_file:Reg_File" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 199
-Info (12128): Elaborating entity "Mux3_4x1" for hierarchy "Datapath:My_Datapath|Mux3_4x1:A1_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 205
-Info (12128): Elaborating entity "Mux3_8x1" for hierarchy "Datapath:My_Datapath|Mux3_8x1:A3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 210
-Info (12128): Elaborating entity "Mux16_8x1" for hierarchy "Datapath:My_Datapath|Mux16_8x1:D3_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 216
-Info (12128): Elaborating entity "SE7" for hierarchy "Datapath:My_Datapath|SE7:T2_SE7" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 219
-Info (12128): Elaborating entity "SE10" for hierarchy "Datapath:My_Datapath|SE10:T2_SE10" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 220
-Info (12128): Elaborating entity "Shifter7" for hierarchy "Datapath:My_Datapath|Shifter7:T2_shift" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 221
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:My_Datapath|ALU:alu1" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 223
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(40): object "sum" assigned a value but never read File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 40
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 228
-Info (12128): Elaborating entity "dff_en" for hierarchy "Datapath:My_Datapath|dff_en:carry_dff" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 230
-Info (12128): Elaborating entity "Memory" for hierarchy "Datapath:My_Datapath|Memory:mem" File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 233
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "Datapath:My_Datapath|Memory:mem|altsyncram:Data[0][15]__1" 
-        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
-        Info (286033): Parameter WIDTH_A set to 12
-        Info (286033): Parameter WIDTHAD_A set to 10
-        Info (286033): Parameter NUMWORDS_A set to 1024
-        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
-        Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Warning (10036): Verilog HDL or VHDL warning at IITB_CPU.vhd(90): object "S_T1_out" assigned a value but never read File: D:/github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 90
+Warning (10036): Verilog HDL or VHDL warning at IITB_CPU.vhd(90): object "S_Test_M" assigned a value but never read File: D:/github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 90
+Warning (10036): Verilog HDL or VHDL warning at IITB_CPU.vhd(90): object "S_R1" assigned a value but never read File: D:/github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 90
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:My_FSM" File: D:/github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at FSM.vhd(64): signal "instruc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at FSM.vhd(65): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "C_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at FSM.vhd(67): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at FSM.vhd(69): signal "State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at FSM.vhd(229): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 229
+Warning (10492): VHDL Process Statement warning at FSM.vhd(263): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 263
+Warning (10492): VHDL Process Statement warning at FSM.vhd(268): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 268
+Warning (10492): VHDL Process Statement warning at FSM.vhd(321): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 321
+Warning (10492): VHDL Process Statement warning at FSM.vhd(326): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU/VHDL_Implementation/FSM.vhd Line: 326
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:My_Datapath" File: D:/github/IITB_CPU/VHDL_Implementation/IITB_CPU.vhd Line: 118
+Info (12128): Elaborating entity "Register_16bit" for hierarchy "Datapath:My_Datapath|Register_16bit:T1" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 188
+Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 194
+Info (12128): Elaborating entity "Register_file" for hierarchy "Datapath:My_Datapath|Register_file:Reg_File" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 199
+Info (12128): Elaborating entity "Mux3_4x1" for hierarchy "Datapath:My_Datapath|Mux3_4x1:A1_Mux" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 205
+Info (12128): Elaborating entity "Mux3_8x1" for hierarchy "Datapath:My_Datapath|Mux3_8x1:A3_Mux" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 210
+Info (12128): Elaborating entity "Mux16_8x1" for hierarchy "Datapath:My_Datapath|Mux16_8x1:D3_Mux" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 216
+Info (12128): Elaborating entity "SE7" for hierarchy "Datapath:My_Datapath|SE7:T2_SE7" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 219
+Info (12128): Elaborating entity "SE10" for hierarchy "Datapath:My_Datapath|SE10:T2_SE10" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 220
+Info (12128): Elaborating entity "Shifter7" for hierarchy "Datapath:My_Datapath|Shifter7:T2_shift" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 221
+Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:My_Datapath|ALU:alu1" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 223
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(40): object "sum" assigned a value but never read File: D:/github/IITB_CPU/VHDL_Implementation/ALU.vhd Line: 40
+Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 228
+Info (12128): Elaborating entity "dff_en" for hierarchy "Datapath:My_Datapath|dff_en:carry_dff" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 230
+Info (12128): Elaborating entity "Memory" for hierarchy "Datapath:My_Datapath|Memory:mem" File: D:/github/IITB_CPU/VHDL_Implementation/Datapath.vhdl Line: 233
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Datapath:My_Datapath|Memory:mem|altsyncram:Data[0][15]__1"
 Info (12130): Elaborated megafunction instantiation "Datapath:My_Datapath|Memory:mem|altsyncram:Data[0][15]__1"
 Info (12133): Instantiated megafunction "Datapath:My_Datapath|Memory:mem|altsyncram:Data[0][15]__1" with the following parameter:
@@ -458,12 +457,13 @@ Info (12133): Instantiated megafunction "Datapath:My_Datapath|Memory:mem|altsync
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2r71.tdf
-    Info (12023): Found entity 1: altsyncram_2r71 File: C:/SEM3/VHDL Github/IITB_CPU/VHDL_Implementation/db/altsyncram_2r71.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_2r71 File: D:/github/IITB_CPU/VHDL_Implementation/db/altsyncram_2r71.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_2r71" for hierarchy "Datapath:My_Datapath|Memory:mem|altsyncram:Data[0][15]__1|altsyncram_2r71:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Tue Nov 29 17:50:31 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:23
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Tue Nov 29 19:46:13 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 

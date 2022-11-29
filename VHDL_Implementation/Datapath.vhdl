@@ -16,7 +16,7 @@ entity Datapath is
         T1_WR,T2_WR,T3_WR,T4_WR,loop_count_WR: in std_logic;        
         ALU_A_sel: in std_logic_vector(2 downto 0);
         ALU_B_sel: in std_logic_vector(1 downto 0);
-        T3_sel, Mem_Add_Sel, Mem_In_Sel: in std_logic;
+        T3_sel, T4_sel, Mem_Add_Sel, Mem_In_Sel: in std_logic;
         loop_sel:in std_logic;
         --Outputs to FSM
         Z_flag, C_flag: out std_logic;
@@ -169,7 +169,7 @@ architecture Struct of Datapath is
     signal A1,A2,A3: std_logic_vector(2 downto 0);
     
     --Signals for temporary Registers.
-    signal T3_in: std_logic_vector(15 downto 0);
+    signal T3_in,T4_in: std_logic_vector(15 downto 0);
     signal T1_out,T4_out,T3_out: std_logic_vector(15 downto 0);
     signal loop_in: std_logic_vector(15 downto 0);
     
@@ -188,13 +188,13 @@ begin
     T1: Register_16bit port map(DataIn => D1, clock => clock, Write_Enable => T1_WR, DataOut => T1_out);
     T2: Register_16bit port map(DataIn => mem_out, clock => clock, Write_Enable => T2_WR, DataOut => T2_out);
     T3: Register_16bit port map(DataIn => T3_in, clock => clock, Write_Enable => T3_WR, DataOut => T3_out);
-    T4: Register_16bit port map(DataIn => D2, clock => clock, Write_Enable => T4_WR, DataOut => T4_out);
+    T4: Register_16bit port map(DataIn => T4_in, clock => clock, Write_Enable => T4_WR, DataOut => T4_out);
     loop_register : Register_16bit port map (DataIn => loop_in, clock => clock, Write_Enable => loop_count_WR, DataOut => loop_count);
     --Mux for Loop register
     Loop_Mux: Mux16_2x1 port map(ALU_C,"0000000000000000",loop_sel,loop_in);
     --Mux for T3 from 00->D1, 01-> ALU_C    
     T3_Mux: MUX16_2x1 port map(A0=> D1,A1=> alu_c, sel =>T3_sel, F=>T3_in);
-
+    T4_Mux: MUX16_2x1 port map(A0=> D2,A1=> alu_c, sel =>T4_sel, F=>T4_in);
 --Register File Instantiate
     Reg_File: Register_file port map (A1, A2, A3, D3, clock, Reg_file_EN, PC, D1, D2,R1_Test);
 --A2 needs no Mux, it has only one input
