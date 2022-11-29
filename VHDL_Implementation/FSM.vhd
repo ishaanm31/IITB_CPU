@@ -15,7 +15,7 @@ entity FSM is
         T1_WR,T2_WR,T3_WR,T4_WR,loop_count_WR: out std_logic;
         ALU_A_sel: out std_logic_vector(2 downto 0);
         ALU_B_sel: out std_logic_vector(1 downto 0);
-        T3_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic;
+        T3_sel,T4_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic;
         loop_sel:out std_logic;
         instruc:in std_logic_vector(15 downto 0)
 		);
@@ -26,8 +26,8 @@ architecture behave of FSM is
     -------ADD-SUM-------------------------------------------------------------
     type FSM_States   is (S0,S1,S2,S3,S4,S5,S6,S7,S8,S9);
     signal State : FSM_States;
-    attribute enum_encoding : string;
-    attribute enum_encoding of FSM_States : type is "one-hot";  -- encoding style of the enumerated type
+--    attribute enum_encoding : string;
+--    attribute enum_encoding of FSM_States : type is "one-hot";  -- encoding style of the enumerated type
 
 begin
     
@@ -43,7 +43,7 @@ process(clock)
     variable v_T1_WR,v_T2_WR,v_T3_WR,v_T4_WR: std_logic;
     variable v_ALU_A_sel: std_logic_vector(2 downto 0);
     variable v_ALU_B_sel: std_logic_vector(1 downto 0);
-    variable v_T3_sel, v_Mem_Add_Sel, v_Mem_In_Sel: std_logic;
+    variable v_T3_sel,v_T4_sel, v_Mem_Add_Sel, v_Mem_In_Sel: std_logic;
     variable OP_code :std_logic_vector(3 downto 0);
     variable v_LMSM_Imm :std_logic_vector(7 downto 0);
     variable Flag: std_logic;
@@ -58,7 +58,7 @@ process(clock)
         v_Z_ctrl:='0';
         v_T1_WR:='0';v_T2_WR:='0';v_T3_WR:='0';v_T4_WR:='0';
         v_ALU_A_sel:="000";v_ALU_B_sel:="00";
-        v_T3_sel:='0';
+        v_T4_sel:='0';
         v_Mem_Add_Sel:='0';
         v_Mem_In_Sel:='0';
         OP_code:= Instruc(15 downto 12);
@@ -131,15 +131,16 @@ case State is --  making cases for states
             next_state:=S0;
         end if;
 -----------------------------------		 
-    when S2 =>
-        v_T3_sel:='1';
+     when S2 =>
         v_T3_WR:='1';
+		  v_T4_WR:='1';
         if(OP_code="0000") then
             v_ALU_A_sel:="001";
             v_ALU_B_sel:="11";
             v_alu_sel:="00";
             v_Z_ctrl:='1';
             v_C_ctrl:='1';
+				v_T3_sel:='1';
             next_state := S8;
 
         elsif (OP_code="0001") then
@@ -148,6 +149,7 @@ case State is --  making cases for states
             v_alu_sel:="00";
             v_Z_ctrl:='1';
             v_C_ctrl:='1';
+				v_T3_sel:='1';
             next_state:= S8;
 
         elsif(OP_code="0010") then
@@ -155,18 +157,21 @@ case State is --  making cases for states
             v_ALU_B_sel:="11";
             v_alu_sel:="01";
             v_Z_ctrl:='1';
+				v_T3_sel:='1';
             next_state := S8 ; 
 
         elsif(OP_code="0100") then
             v_ALU_A_sel:="011";
             v_ALU_B_sel:="11";
             v_alu_sel:="00";
+				v_T4_sel:='1';
             next_state:= S4;
 
         elsif(OP_code="0101") then
             v_ALU_A_sel:="011";
             v_ALU_B_sel:="11";
             v_alu_sel:="00";
+				v_T4_sel:='1';
             next_state:= S5;
 
         elsif(OP_code="1100") then
@@ -174,6 +179,7 @@ case State is --  making cases for states
             v_ALU_B_sel:="11";
             v_alu_sel:="10";
             v_Z_ctrl:='1';
+				v_T3_sel:='1';
             next_state := S3;
 
         else 
